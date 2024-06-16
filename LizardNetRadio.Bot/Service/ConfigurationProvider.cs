@@ -8,5 +8,6 @@ namespace LizardNetRadio.Bot.Service
         public string DebugChannel => config.DefaultChannel;
         public bool AllowQuotedStrings => true;
         public bool IncludeBuiltins => true;
+        public string UseCommandInitSeparator => ";";
     }
 }

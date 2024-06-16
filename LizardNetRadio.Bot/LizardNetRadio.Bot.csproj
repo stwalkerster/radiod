@@ -14,7 +14,7 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
         <PackageReference Include="NETStandard.Library" Version="2.0.3" />
         <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
-        <PackageReference Include="Stwalkerster.Bot.CommandLib" Version="18.0.149" />
+        <PackageReference Include="Stwalkerster.Bot.CommandLib" Version="19.0.152" />
     </ItemGroup>
 
     <ItemGroup>
