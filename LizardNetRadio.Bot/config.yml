@@ -1,0 +1,19 @@
+---
+commandPrefix: !
+defaultChannel: "#radio"
+adminMask: "*!*@staff/*"
+
+hostname: localhost
+nickname: radiod
+port: 6697
+realName: Radio LizardNet
+servicesCertificate: radiod.pfx
+
+rabbitMqConfiguration:
+  objectPrefix: radiolizardnet.
+  hostname: localhost
+  port: 5672
+  virtualHost: /
+  username: guest
+  password: guest
+  tls: false

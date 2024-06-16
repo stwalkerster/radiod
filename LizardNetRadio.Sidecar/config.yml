@@ -1,0 +1,12 @@
+---
+liquidSoapHostname: localhost
+liquidSoapPort: 1234
+
+rabbitMqConfiguration:
+  objectPrefix: radiolizardnet.
+  hostname: localhost
+  port: 5672
+  virtualHost: /
+  username: guest
+  password: guest
+  tls: false
