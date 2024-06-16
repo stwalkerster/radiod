@@ -1,6 +1,5 @@
 namespace LizardNetRadio.Bot.Service;
 
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
 using Castle.Core;
@@ -161,11 +160,101 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
         throw new Exception(data);
     }
+    
+    public async Task<int> Request(string command)
+    {
+        var (guid, semaphore) = this.RemoteProcedureCall("request.push " + command);
+        
+        await semaphore.WaitAsync();
+        
+        string data, responseType;
+        lock (this)
+        {
+            (var _, responseType, data) = this.taskList[guid];
+            this.taskList.Remove(guid);
+        }
+
+        if (responseType != "Reply")
+        {
+            throw new Exception(data);
+        }
+
+        return int.Parse(data);
+    }
+
+    public async Task<double> Remaining()
+    {
+        var (guid, semaphore) = this.RemoteProcedureCall("radio.remaining");
+        
+        await semaphore.WaitAsync();
+        
+        string data, responseType;
+        lock (this)
+        {
+            (var _, responseType, data) = this.taskList[guid];
+            this.taskList.Remove(guid);
+        }
+
+        if (responseType == "Reply")
+        {
+            return double.Parse(data);
+        }
+
+        throw new Exception(data);
+    }
+    
+    public async Task<(string artist, string title)> NowPlaying()
+    {
+        var (guid, semaphore) = this.RemoteProcedureCall("radio.metadata");
+        
+        await semaphore.WaitAsync();
+        
+        string data, responseType;
+        lock (this)
+        {
+            (_, responseType, data) = this.taskList[guid];
+            this.taskList.Remove(guid);
+        }
+
+        if (responseType != "Reply")
+        {
+            throw new Exception(data);
+        }
+
+        var lines = data.Split("\n").ToList();
+        var artist = "";
+        var title = "";
+
+        foreach (var l in lines)
+        {
+            if (l.StartsWith("--- ") && l.EndsWith(" ---"))
+            {
+                artist = title = string.Empty;
+            }
+
+            if (l.StartsWith("artist="))
+            {
+                artist = l.Substring("artist=".Length).Trim('"');
+            }
+
+            if (l.StartsWith("title="))
+            {
+                title = l.Substring("title=".Length).Trim('"');
+            }
+        }
+
+        return (artist, title);
+    }
 }
 
 public interface ILiquidSoapClient
 {
     Task SkipTrack();
 
+    Task<(string artist, string title)> NowPlaying();
+
     Task<IEnumerable<string>> Inject(string command);
+    Task<int> Request(string file);
+
+    Task<double> Remaining();
 }
