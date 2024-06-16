@@ -71,8 +71,8 @@ jobs:
         context: LizardNetRadio.Bot/bin/Debug/radiod-bot/
         push: true
         tags: |
-          ghcr.io/stwalkerster/radiod-bot:latest
-          ghcr.io/stwalkerster/radiod-bot:${{ steps.vars.outputs.sha_short }}
+          ghcr.io/stwalkerster/radiod:bot
+          ghcr.io/stwalkerster/radiod:bot-${{ steps.vars.outputs.sha_short }}
         build-args: |
           GIT_VERSION_HASH=${{ github.sha }}
 
@@ -83,7 +83,7 @@ jobs:
         context: LizardNetRadio.Sidecar/bin/Debug/radiod-sidecar/
         push: true
         tags: |
-          ghcr.io/stwalkerster/radiod-sidecar:latest
-          ghcr.io/stwalkerster/radiod-sidecar:${{ steps.vars.outputs.sha_short }}
+          ghcr.io/stwalkerster/radiod:sidecar
+          ghcr.io/stwalkerster/radiod:sidecar-${{ steps.vars.outputs.sha_short }}
         build-args: |
           GIT_VERSION_HASH=${{ github.sha }}
