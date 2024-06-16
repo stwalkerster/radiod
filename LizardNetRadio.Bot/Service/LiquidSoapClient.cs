@@ -140,9 +140,32 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
             throw new Exception(data);
         }
     }
+
+    public async Task<IEnumerable<string>> Inject(string command)
+    {
+        var (guid, semaphore) = this.RemoteProcedureCall(command);
+        
+        await semaphore.WaitAsync();
+        
+        string data, responseType;
+        lock (this)
+        {
+            (var _, responseType, data) = this.taskList[guid];
+            this.taskList.Remove(guid);
+        }
+
+        if (responseType == "Reply")
+        {
+            return data.Split("\n").ToList();
+        }
+
+        throw new Exception(data);
+    }
 }
 
 public interface ILiquidSoapClient
 {
     Task SkipTrack();
+
+    Task<IEnumerable<string>> Inject(string command);
 }
