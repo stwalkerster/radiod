@@ -47,14 +47,14 @@ jobs:
       if: github.event_name != 'pull_request'
       run: |
         cd LizardNetRadio.Bot/bin/Debug
-        mv net8.0 radiod-bot-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}
-        tar czf radiod-bot-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}.tar.gz radiod-bot-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
-        aws s3 cp radiod-bot-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/
+        mv net8.0 radiod-bot
+        tar czf radiod-bot.tar.gz radiod-bot/
+        aws s3 cp radiod-bot.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
 
         cd ../../../LizardNetRadio.Sidecar/bin/Debug
-        mv net8.0 radiod-sidecar-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}
-        tar czf radiod-sidecar-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}.tar.gz radiod-sidecar-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
-        aws s3 cp radiod-sidecar-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/
+        mv net8.0 radiod-sidecar
+        tar czf radiod-sidecar.tar.gz radiod-sidecar/
+        aws s3 cp radiod-sidecar.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
 
     - name: GHCR login
       if: github.event_name != 'pull_request'
