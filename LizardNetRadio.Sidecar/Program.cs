@@ -32,7 +32,11 @@ class Program
 
     private void Run(GlobalConfiguration config)
     {
+        this.logger.InfoFormat("Initialising sidecar for {0}:{1}...", config.LiquidSoapHostname, config.LiquidSoapPort);
+
         this.liquidSoapClient = new LiquidSoapClient(config.LiquidSoapHostname, config.LiquidSoapPort);
+        
+        this.logger.InfoFormat("Using broker at {0}:{1}...", config.RabbitMqConfiguration.Hostname, config.RabbitMqConfiguration.Port);
         
         var factory = new ConnectionFactory
         {
