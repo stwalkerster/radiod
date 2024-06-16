@@ -68,7 +68,7 @@ jobs:
       uses: docker/build-push-action@v5
       if: github.event_name != 'pull_request'
       with:
-        context: LizardNetRadio.Bot/bin/Debug/radiod-bot-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
+        context: LizardNetRadio.Bot/bin/Debug/radiod-bot/
         push: true
         tags: |
           ghcr.io/stwalkerster/radiod-bot:latest
@@ -80,7 +80,7 @@ jobs:
       uses: docker/build-push-action@v5
       if: github.event_name != 'pull_request'
       with:
-        context: LizardNetRadio.Sidecar/bin/Debug/radiod-sidecar-${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
+        context: LizardNetRadio.Sidecar/bin/Debug/radiod-sidecar/
         push: true
         tags: |
           ghcr.io/stwalkerster/radiod-sidecar:latest
