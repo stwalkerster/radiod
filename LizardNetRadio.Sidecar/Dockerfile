@@ -11,3 +11,4 @@ LABEL org.opencontainers.image.vendor="Simon Walker <github@stwalkerster.co.uk>"
 LABEL org.opencontainers.image.description="radiod - IRC-based control of LiquidSoap"
 
 USER 1000
+CMD [ "/opt/LizardNetRadio.Sidecar" ]
