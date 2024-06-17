@@ -65,7 +65,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build Bot Docker image
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       if: github.event_name != 'pull_request'
       with:
         context: LizardNetRadio.Bot/bin/Debug/radiod-bot/
@@ -77,7 +77,7 @@ jobs:
           GIT_VERSION_HASH=${{ github.sha }}
 
     - name: Build Sidecar Docker image
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       if: github.event_name != 'pull_request'
       with:
         context: LizardNetRadio.Sidecar/bin/Debug/radiod-sidecar/
