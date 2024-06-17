@@ -38,7 +38,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         
         var connection = factory.CreateConnection();
         this.channel = connection.CreateModel();
-
+        
         this.objectPrefix = config.RabbitMqConfiguration.ObjectPrefix;
         var queue = this.objectPrefix + "reply";
         this.channel.QueueDeclare(queue, true, false, false);
@@ -48,7 +48,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         this.channel.QueueBind(queue, queue, "");
 
         this.consumer = new EventingBasicConsumer(this.channel);
-        this.channel.BasicConsume(queue, false, this.consumer);
+        this.channel.BasicConsume(queue, true, this.consumer);
     }
 
     private (string, SemaphoreSlim) RemoteProcedureCall(string command)
