@@ -1,6 +1,6 @@
 namespace LizardNetRadio.Bot.Commands;
 
-using Castle.Core.Logging;
+using Microsoft.Extensions.Logging;
 using Service;
 using Stwalkerster.Bot.CommandLib.Attributes;
 using Stwalkerster.Bot.CommandLib.Commands.CommandUtilities;

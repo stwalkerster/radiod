@@ -8,13 +8,14 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <PackageReference Include="Castle.Core-log4net" Version="4.4.1" />
-        <PackageReference Include="Castle.LoggingFacility" Version="4.1.1" />
-        <PackageReference Include="Castle.Windsor" Version="4.1.1" />
+        <PackageReference Include="Castle.Core-log4net" Version="5.1.1" />
+        <PackageReference Include="Castle.LoggingFacility" Version="6.0.0" />
+        <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+        <PackageReference Include="log4net" Version="2.0.17" />
         <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
         <PackageReference Include="NETStandard.Library" Version="2.0.3" />
         <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
-        <PackageReference Include="Stwalkerster.Bot.CommandLib" Version="19.0.152" />
+        <PackageReference Include="Stwalkerster.Bot.CommandLib" Version="20.0.157" />
     </ItemGroup>
 
     <ItemGroup>
