@@ -39,6 +39,7 @@ namespace LizardNetRadio.Bot.Startup
                 Component.For<ILoggerFactory>().Instance(loggerFactory),
                 Component.For<ILogger<SupportHelper>>().UsingFactoryMethod(loggerFactory.CreateLogger<SupportHelper>),
                 Component.For<ILogger<CommandParser>>().UsingFactoryMethod(loggerFactory.CreateLogger<CommandParser>),
+                Component.For<ILogger<CommandHandler>>().UsingFactoryMethod(loggerFactory.CreateLogger<CommandHandler>),
                 Classes.FromAssemblyContaining<Installer>().InNamespace(ns + ".Service").WithServiceAllInterfaces(),
                 Classes.FromAssemblyContaining<Installer>().BasedOn<ICommand>().LifestyleTransient(),
                 Component.For<ISupportHelper>().ImplementedBy<SupportHelper>(),

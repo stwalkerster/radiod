@@ -58,7 +58,7 @@ class Program
         var connection = factory.CreateConnection();
         this.channel = connection.CreateModel();
         
-        var queue = config.RabbitMqConfiguration.ObjectPrefix + "request";
+        var queue = config.RabbitMqConfiguration.ObjectPrefix + config.RequestQueue;
         this.channel.QueueDeclare(queue, true, false, false);
         this.channel.QueuePurge(queue);
         

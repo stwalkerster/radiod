@@ -9,6 +9,9 @@ port: 6697
 realName: Radio LizardNet
 servicesCertificate: radiod.pfx
 
+myQueue: reply
+requestQueue: request
+
 rabbitMqConfiguration:
   objectPrefix: radiolizardnet.
   hostname: localhost

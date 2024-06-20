@@ -14,7 +14,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
     private readonly EventingBasicConsumer consumer;
 
     private readonly Dictionary<string, (SemaphoreSlim semaphore, string responseType, string data)> taskList = new();
-    private readonly string objectPrefix;
+    private readonly string replyQueueName;
+    private readonly string requestQueueName;
     
     public LiquidSoapClient(GlobalConfiguration config, ILogger logger)
     {
@@ -38,17 +39,17 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         
         var connection = factory.CreateConnection();
         this.channel = connection.CreateModel();
+
+        this.replyQueueName = config.RabbitMqConfiguration.ObjectPrefix + config.MyQueue;
+        this.requestQueueName = config.RabbitMqConfiguration.ObjectPrefix + config.RequestQueue;
+        this.channel.QueueDeclare(this.replyQueueName, true, false, false);
+        this.channel.QueuePurge(this.replyQueueName);
         
-        this.objectPrefix = config.RabbitMqConfiguration.ObjectPrefix;
-        var queue = this.objectPrefix + "reply";
-        this.channel.QueueDeclare(queue, true, false, false);
-        this.channel.QueuePurge(queue);
-        
-        this.channel.ExchangeDeclare(queue, "direct", true);
-        this.channel.QueueBind(queue, queue, "");
+        this.channel.ExchangeDeclare(this.replyQueueName, "direct", true);
+        this.channel.QueueBind(this.replyQueueName, this.replyQueueName, "");
 
         this.consumer = new EventingBasicConsumer(this.channel);
-        this.channel.BasicConsume(queue, true, this.consumer);
+        this.channel.BasicConsume(this.replyQueueName, true, this.consumer);
     }
 
     private (string, SemaphoreSlim) RemoteProcedureCall(string command)
@@ -57,7 +58,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         var semaphore = new SemaphoreSlim(0, 1);
         
         var sendProps = this.channel.CreateBasicProperties();
-        sendProps.ReplyToAddress = new PublicationAddress("direct", this.objectPrefix + "reply", "");
+        sendProps.ReplyToAddress = new PublicationAddress("direct", this.replyQueueName, "");
         sendProps.CorrelationId = guid;
         sendProps.Timestamp = new AmqpTimestamp();
         sendProps.Type = "Request";
@@ -70,7 +71,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         this.logger.DebugFormat("Sending request with ID {0}", guid);
         
         this.channel.BasicPublish(
-            exchange: this.objectPrefix + "request",
+            exchange: this.requestQueueName,
             routingKey: "",
             basicProperties: sendProps,
             body: Encoding.UTF8.GetBytes(command));

@@ -18,5 +18,8 @@ namespace LizardNetRadio.Bot
         public string DefaultChannel { get; set; }
         
         public string AdminMask { get; set; }
+        
+        public string MyQueue { get; set; }
+        public string RequestQueue { get; set; }
     }
 }

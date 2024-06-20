@@ -2,6 +2,8 @@
 liquidSoapHostname: localhost
 liquidSoapPort: 1234
 
+requestQueue: request
+
 rabbitMqConfiguration:
   objectPrefix: radiolizardnet.
   hostname: localhost
