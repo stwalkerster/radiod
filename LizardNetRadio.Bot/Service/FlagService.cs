@@ -31,6 +31,7 @@ namespace LizardNetRadio.Bot.Service
                 return new[] {Flag.Owner, Flag.Standard};
             }
 
-            return Array.Empty<string>();        }
+            return new[] {Flag.Standard};
+        }
     }
 }
