@@ -24,7 +24,8 @@ public class RawCommand : CommandBase
         IIrcClient client) : base(commandSource, user, arguments, logger, flagService, configurationProvider, client)
     {
     }
-
+    
+    [Help("<data>", "Injects data into the IRC network socket.")]
     protected override IEnumerable<CommandResponse> Execute()
     {
         ((IrcClient)this.Client).Inject(this.OriginalArguments);

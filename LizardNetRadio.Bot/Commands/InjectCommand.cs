@@ -28,7 +28,8 @@ public class InjectCommand : CommandBase
     {
         this.liquidSoapClient = liquidSoapClient;
     }
-
+    
+    [Help("<data>", "Injects data into Liquidsoap's control socket and returns the result")]
     protected override IEnumerable<CommandResponse> Execute()
     {
         try

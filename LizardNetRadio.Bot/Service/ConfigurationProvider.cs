@@ -7,7 +7,7 @@ namespace LizardNetRadio.Bot.Service
         public string CommandPrefix => config.CommandPrefix;
         public string DebugChannel => config.DefaultChannel;
         public bool AllowQuotedStrings => true;
-        public bool IncludeBuiltins => true;
+        public bool IncludeBuiltins => false;
         public string UseCommandInitSeparator => ";";
     }
 }

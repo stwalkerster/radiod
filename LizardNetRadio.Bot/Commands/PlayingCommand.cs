@@ -29,6 +29,7 @@ public class PlayingCommand : CommandBase
         this.liquidSoapClient = liquidSoapClient;
     }
 
+    [Help("", "Prints the currently playing track")]
     protected override IEnumerable<CommandResponse> Execute()
     {
         try

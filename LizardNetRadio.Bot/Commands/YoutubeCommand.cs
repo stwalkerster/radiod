@@ -30,6 +30,7 @@ public class YoutubeCommand : CommandBase
         this.liquidSoapClient = liquidSoapClient;
     }
 
+    [Help("<URL>", "Adds a YouTube video (or other yt-dlp compatible source) to the request queue.")]
     protected override IEnumerable<CommandResponse> Execute()
     {
         try

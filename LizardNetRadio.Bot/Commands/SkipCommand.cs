@@ -29,6 +29,7 @@ public class SkipCommand : CommandBase
         this.liquidSoapClient = liquidSoapClient;
     }
 
+    [Help("", "Skips the currently playing track")]
     protected override IEnumerable<CommandResponse> Execute()
     {
         try

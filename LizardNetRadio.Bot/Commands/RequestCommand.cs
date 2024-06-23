@@ -29,6 +29,7 @@ public class RequestCommand : CommandBase
         this.liquidSoapClient = liquidSoapClient;
     }
 
+    [Help("<path>", "Adds a file to the song request queue. This file must be a local path or HTTP stream.")]
     protected override IEnumerable<CommandResponse> Execute()
     {
         try
