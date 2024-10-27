@@ -35,7 +35,7 @@ public class RequestCommand : CommandBase
         try
         {
             var first = this.Arguments.First().Replace("\\.", ".");
-            var task = this.liquidSoapClient.Request(first);
+            var task = this.liquidSoapClient.Request(first, "request");
             task.Wait();
 
             return new[] { new CommandResponse { Message = "Queued requested track as ID " + task.Result } };

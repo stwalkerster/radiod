@@ -162,9 +162,9 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         throw new Exception(data);
     }
     
-    public async Task<int> Request(string command)
+    public async Task<int> Request(string command, string queue)
     {
-        var (guid, semaphore) = this.RemoteProcedureCall("request.push " + command);
+        var (guid, semaphore) = this.RemoteProcedureCall(queue + ".push " + command);
         
         await semaphore.WaitAsync();
         
@@ -246,16 +246,4 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
         return (artist, title);
     }
-}
-
-public interface ILiquidSoapClient
-{
-    Task SkipTrack();
-
-    Task<(string artist, string title)> NowPlaying();
-
-    Task<IEnumerable<string>> Inject(string command);
-    Task<int> Request(string file);
-
-    Task<double> Remaining();
 }

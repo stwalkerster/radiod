@@ -36,7 +36,7 @@ public class YoutubeCommand : CommandBase
         try
         {
             var first = this.Arguments.First().Replace("\\.", ".");
-            var task = this.liquidSoapClient.Request("youtube-dl:" + first);
+            var task = this.liquidSoapClient.Request("youtube-dl:" + first, "request");
             task.Wait();
 
             return new[] { new CommandResponse { Message = "Queued requested video as ID " + task.Result } };

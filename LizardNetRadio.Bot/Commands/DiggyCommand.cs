@@ -34,7 +34,7 @@ public class DiggyCommand : CommandBase
     {
         try
         {
-            var task = this.liquidSoapClient.Request("/music/finland/diggy.mp3");
+            var task = this.liquidSoapClient.Request("/music/finland/diggy.mp3", "request");
             task.Wait();
 
             
