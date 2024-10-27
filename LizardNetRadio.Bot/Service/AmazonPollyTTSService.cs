@@ -53,7 +53,8 @@ public class AmazonPollyTTSService : ITextToSpeechService
             VoiceId = voiceId,
             OutputFormat = "mp3",
             TextType = TextType.Ssml,
-            OutputS3BucketName = this.bucket
+            OutputS3BucketName = this.bucket,
+            LexiconNames = ["radio"]
         };
         var startResult = await this.pollyClient.StartSpeechSynthesisTaskAsync(request, CancellationToken.None);
 
