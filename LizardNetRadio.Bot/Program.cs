@@ -7,6 +7,8 @@ using Startup;
 using Stwalkerster.Bot.CommandLib.Services.Interfaces;
 using Stwalkerster.IrcClient;
 using Stwalkerster.IrcClient.Interfaces;
+using Stwalkerster.IrcClient.Messages;
+using Stwalkerster.IrcClient.Network;
 
 public class Program : IApplication
 {
@@ -49,6 +51,14 @@ public class Program : IApplication
     public Program(IIrcClient client, ICommandHandler commandHandler,  GlobalConfiguration configuration)
     {
         client.ReceivedMessage += commandHandler.OnMessageReceived;
+        
+        client.WaitOnRegistration();
+
+        if (!string.IsNullOrWhiteSpace(configuration.OperUser) && !string.IsNullOrWhiteSpace(configuration.OperPass))
+        {
+            client.Send(new Message("OPER", [configuration.OperUser, configuration.OperPass]));
+            ((NetworkClient)((IrcClient)client).NetworkClient).FloodDelay = 0;
+        }
 
         client.JoinChannel(configuration.DefaultChannel);
     }

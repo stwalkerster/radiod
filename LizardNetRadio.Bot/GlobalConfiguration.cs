@@ -19,6 +19,9 @@ namespace LizardNetRadio.Bot
         
         public string AdminMask { get; set; }
         
+        public string OperUser { get; set; }
+        public string OperPass { get; set; }
+        
         public string MyQueue { get; set; }
         public string RequestQueue { get; set; }
     }

@@ -9,6 +9,9 @@ port: 6697
 realName: Radio LizardNet
 servicesCertificate: radiod.pfx
 
+operUser: ""
+operPass: ""
+
 myQueue: reply
 requestQueue: request
 
