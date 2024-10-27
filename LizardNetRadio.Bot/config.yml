@@ -24,3 +24,36 @@ rabbitMqConfiguration:
   username: guest
   password: guest
   tls: false
+
+awsConfiguration:
+  bucketName: radiod-bucket
+  voices:
+    # en-US
+    - Danielle
+    - Gregory
+    - Kevin
+    - Salli
+    - Matthew
+    - Kimberly
+    - Kendra
+    - Justin
+    - Joey
+    - Joanna
+    - Ivy
+    - Ruth
+    - Stephen
+    # en-GB
+    - Emma
+    - Brian
+    - Amy
+    - Arthur
+    # en-AU
+    - Olivia
+    # en-NZ
+    - Aria
+    # en-IE
+    - Niamh
+    # en-IN
+    - Kajal
+    # en-ZA
+    - Ayanda

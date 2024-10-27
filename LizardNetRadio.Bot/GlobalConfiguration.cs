@@ -6,6 +6,7 @@ namespace LizardNetRadio.Bot
     public class GlobalConfiguration
     {
         public RabbitMqConfiguration RabbitMqConfiguration { get; set; }
+        public AwsConfiguration AwsConfiguration { get; set; }
 
         public string Hostname { get; set; }
         public ushort Port { get; set; }

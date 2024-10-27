@@ -8,6 +8,8 @@
     </PropertyGroup>
     
     <ItemGroup>
+        <PackageReference Include="AWSSDK.Polly" Version="3.7.401.29" />
+        <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.400.40" />
         <PackageReference Include="Castle.Core-log4net" Version="5.1.1" />
         <PackageReference Include="Castle.LoggingFacility" Version="6.0.0" />
         <PackageReference Include="Castle.Windsor" Version="6.0.0" />

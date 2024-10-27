@@ -6,6 +6,7 @@
     <option name="recentlyUsedProfiles">
       <list>
         <option value="profile:default" />
+        <option value="profile:radiod-sbx" />
       </list>
     </option>
     <option name="recentlyUsedRegions">
@@ -13,5 +14,8 @@
         <option value="eu-west-1" />
       </list>
     </option>
+  </component>
+  <component name="explorerToolWindow">
+    <option name="selectedTab" value="Amazon Q" />
   </component>
 </project>
