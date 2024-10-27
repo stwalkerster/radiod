@@ -38,7 +38,8 @@ public class Program : IApplication
                         config.RealName,
                         true,
                         "LizardNet",
-                        servicesCertificate: config.ServicesCertificate
+                        servicesCertificate: config.ServicesCertificate,
+                        serverPassword:config.ServerPassword
                     )));
 
         container.Install(new Installer());
