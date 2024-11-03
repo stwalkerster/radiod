@@ -183,7 +183,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         return int.Parse(data);
     }
 
-    public async Task<double> Remaining()
+    public async Task<double?> Remaining()
     {
         var (guid, semaphore) = this.RemoteProcedureCall("radio.remaining");
         
@@ -198,7 +198,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
         if (responseType == "Reply")
         {
-            return double.Parse(data);
+            var success = double.TryParse(data, out var result);
+            return success ? result : null;
         }
 
         throw new Exception(data);

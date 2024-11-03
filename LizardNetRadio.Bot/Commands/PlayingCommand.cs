@@ -39,13 +39,19 @@ public class PlayingCommand : CommandBase
 
             Task.WaitAll(task, remTask);
 
-            var remaining = new TimeSpan(0, 0, 0, (int)remTask.Result).ToString("mm\\:ss");
+            var remaining = "";
+            
+            if (remTask.Result != null)
+            {
+                remaining = new TimeSpan(0, 0, 0, (int)remTask.Result).ToString("mm\\:ss");
+                remaining = $" ({remaining} remaining)";
+            }
             
             return new CommandResponse[]
             {
                 new()
                 {
-                    Message = $"Now Playing: {task.Result.artist} - {task.Result.title} ({remaining} remaining)"
+                    Message = $"Now Playing: {task.Result.artist} - {task.Result.title}{remaining}"
                 }
             };
         }
