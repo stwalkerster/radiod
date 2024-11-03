@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Stwalkerster.Bot.CommandLib.Attributes;
 using Stwalkerster.Bot.CommandLib.Commands.CommandUtilities;
 using Stwalkerster.Bot.CommandLib.Commands.CommandUtilities.Response;
+using Stwalkerster.Bot.CommandLib.ExtensionMethods;
 using Stwalkerster.Bot.CommandLib.Model;
 using Stwalkerster.Bot.CommandLib.Services.Interfaces;
 using Stwalkerster.IrcClient.Interfaces;
@@ -34,9 +35,13 @@ public class ShoutoutCommand : CommandBase
     }
 
     [RequiredArguments(1)]
+    [Help("<shoutout>", "Prints the currently playing track")]
+    [CommandParameter("voice=", "Use the specified voice.", "voice", typeof(string))]
     protected override IEnumerable<CommandResponse> Execute()
     {
-        var uriTask = this.ttsService.SpeakAsync(this.OriginalArguments);
+        var voice = this.Parameters.GetParameter("voice", string.Empty);
+        
+        var uriTask = this.ttsService.SpeakAsync(string.Join(' ', this.Arguments), voice);
         uriTask.Wait();
 
         var annotate = $"annotate:artist=\"{this.User.Nickname}\",title=\"Shoutout!\":";

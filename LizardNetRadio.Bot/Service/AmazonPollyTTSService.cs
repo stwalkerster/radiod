@@ -42,15 +42,18 @@ public class AmazonPollyTTSService : ITextToSpeechService
         this.bucket = bucket;
     }
 
-    public async Task<Uri> SpeakAsync(string text)
+    public async Task<Uri> SpeakAsync(string text, string voice)
     {
-        var voiceId = this.voices[this.random.Next(this.voices.Count)];
-        
+        if (!this.voices.Contains(voice))
+        {
+            voice = this.voices[this.random.Next(this.voices.Count)];
+        }
+
         var request = new StartSpeechSynthesisTaskRequest
         {
             Text = "<speak>" + text + "<break strength=\"x-strong\"/></speak>",
             Engine = Engine.Neural,
-            VoiceId = voiceId,
+            VoiceId = voice,
             OutputFormat = "mp3",
             TextType = TextType.Ssml,
             OutputS3BucketName = this.bucket,
@@ -82,7 +85,7 @@ public class AmazonPollyTTSService : ITextToSpeechService
             throw new CommandErrorException(synthesisTask.TaskStatusReason);
         }
 
-        this.logger.InfoFormat("Speech synthesis {2} completed using voice {0} for text {1}", voiceId, text, synthesisTask.TaskId);
+        this.logger.InfoFormat("Speech synthesis {2} completed using voice {0} for text {1}", voice, text, synthesisTask.TaskId);
         
         return new Uri(synthesisTask.OutputUri);
     }

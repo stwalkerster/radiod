@@ -2,5 +2,5 @@ namespace LizardNetRadio.Bot.Service;
 
 public interface ITextToSpeechService
 {
-    Task<Uri> SpeakAsync(string text);
+    Task<Uri> SpeakAsync(string text, string voice);
 }
