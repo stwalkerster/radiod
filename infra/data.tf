@@ -29,7 +29,8 @@ locals {
       IpAddress = {
         "aws:SourceIp" = flatten([
           [for rrset in data.dns_a_record_set.linode : rrset.addrs],
-          [for rrset in data.dns_aaaa_record_set.linode : rrset.addrs]
+          [for rrset in data.dns_aaaa_record_set.linode : rrset.addrs],
+          var.extra_source_ips
         ])
       }
     }
