@@ -16,6 +16,8 @@ operPass: ""
 myQueue: reply
 requestQueue: request
 
+streamName: radio
+
 rabbitMqConfiguration:
   objectPrefix: radiolizardnet.
   hostname: localhost

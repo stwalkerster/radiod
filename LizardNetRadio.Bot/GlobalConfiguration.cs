@@ -26,5 +26,7 @@ namespace LizardNetRadio.Bot
         
         public string MyQueue { get; set; }
         public string RequestQueue { get; set; }
+        
+        public string StreamName { get; set; }
     }
 }

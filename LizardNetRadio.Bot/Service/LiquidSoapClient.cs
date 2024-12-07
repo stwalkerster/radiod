@@ -16,6 +16,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
     private readonly Dictionary<string, (SemaphoreSlim semaphore, string responseType, string data)> taskList = new();
     private readonly string replyQueueName;
     private readonly string requestQueueName;
+
+    private readonly string streamName;
     
     public LiquidSoapClient(GlobalConfiguration config, ILogger logger)
     {
@@ -42,6 +44,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
         this.replyQueueName = config.RabbitMqConfiguration.ObjectPrefix + config.MyQueue;
         this.requestQueueName = config.RabbitMqConfiguration.ObjectPrefix + config.RequestQueue;
+        
         this.channel.QueueDeclare(this.replyQueueName, true, false, false);
         this.channel.QueuePurge(this.replyQueueName);
         
@@ -50,6 +53,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
         this.consumer = new EventingBasicConsumer(this.channel);
         this.channel.BasicConsume(this.replyQueueName, true, this.consumer);
+
+        this.streamName = config.StreamName;
     }
 
     private (string, SemaphoreSlim) RemoteProcedureCall(string command)
@@ -118,7 +123,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
     {
         this.logger.DebugFormat("Skipping track...");
         
-        var (guid, semaphore) = this.RemoteProcedureCall("radio.skip");
+        var (guid, semaphore) = this.RemoteProcedureCall($"{this.streamName}.skip");
         
         await semaphore.WaitAsync();
 
@@ -185,7 +190,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
     public async Task<double?> Remaining()
     {
-        var (guid, semaphore) = this.RemoteProcedureCall("radio.remaining");
+        var (guid, semaphore) = this.RemoteProcedureCall($"{this.streamName}.remaining");
         
         await semaphore.WaitAsync();
         
@@ -207,7 +212,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
     
     public async Task<(string artist, string title)> NowPlaying()
     {
-        var (guid, semaphore) = this.RemoteProcedureCall("radio.metadata");
+        var (guid, semaphore) = this.RemoteProcedureCall($"{this.streamName}.metadata");
         
         await semaphore.WaitAsync();
         
