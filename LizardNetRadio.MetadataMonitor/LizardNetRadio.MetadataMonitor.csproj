@@ -15,18 +15,9 @@
     <ItemGroup>
       <ProjectReference Include="..\LizardNetRadio.Common\LizardNetRadio.Common.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Reference Include="log4net">
-        <HintPath>..\..\..\.nuget\packages\log4net\2.0.17\lib\netstandard2.0\log4net.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
+    
     <ItemGroup>
       <None Update="log4net.xml">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="config.yml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
       <None Update="Dockerfile">
