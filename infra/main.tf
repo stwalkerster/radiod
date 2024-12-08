@@ -13,13 +13,14 @@ terraform {
 
   backend "s3" {
     bucket = "stwalkerster-terraform-state"
-    key    = "state/Production/radiod/terraform.tfstate"
+    # key    = "state/Production/radiod/terraform.tfstate"
+    key    = "state/Sandbox/radiod/terraform.tfstate"
     region = "eu-west-1"
 
     dynamodb_table = "terraform-state-lock"
 
     assume_role = {
-      role_arn = "arn:aws:iam::XXXXXXXXX:role/TerraformState"
+      role_arn = "arn:aws:iam::273883981351:role/TerraformState"
     }
   }
 
@@ -30,14 +31,16 @@ provider "aws" {
   region = "eu-west-1"
 
   assume_role {
-    role_arn = "arn:aws:iam::XXXXXXXXX:role/Terraform"
+    # role_arn = "arn:aws:iam::098014529583:role/Terraform"
+    role_arn = "arn:aws:iam::265088867231:role/Terraform"
   }
 
   default_tags {
     tags = {
-      "Terraform"   = "yes"
-      "Project"     = "radiod"
-      "Environment" = "Production"
+      "Terraform" = "yes"
+      "Project"   = "radiod"
+      # "Environment" = "Production"
+      "Environment" = "Sandbox"
     }
   }
 }
