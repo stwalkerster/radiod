@@ -1,10 +1,12 @@
-namespace LizardNetRadio.Bot.Service;
+namespace LizardNetRadio.Bot;
 
 using Amazon.Polly;
 using Amazon.Polly.Model;
+using Amazon.Runtime.CredentialManagement;
 using Amazon.SecurityToken;
 using Amazon.SecurityToken.Model;
 using Castle.Core.Logging;
+using LizardNetRadio.Bot.Service;
 using Stwalkerster.Bot.CommandLib.Exceptions;
 
 public class AmazonPollyTTSService : ITextToSpeechService
@@ -19,8 +21,12 @@ public class AmazonPollyTTSService : ITextToSpeechService
     public AmazonPollyTTSService(ILogger logger, GlobalConfiguration globalConfiguration)
     {
         this.logger = logger;
+
+        var sharedFile = new SharedCredentialsFile();
+        sharedFile.TryGetProfile(globalConfiguration.AwsConfiguration.Profile, out var profile);
+        var creds = profile.GetAWSCredentials(sharedFile);
         
-        var stsClient = new AmazonSecurityTokenServiceClient();
+        var stsClient = new AmazonSecurityTokenServiceClient(creds);
         var callerIdentityAsync = stsClient.GetCallerIdentityAsync(
             new GetCallerIdentityRequest(),
             CancellationToken.None);
@@ -31,7 +37,7 @@ public class AmazonPollyTTSService : ITextToSpeechService
             callerIdentityAsync.Result.Account,
             callerIdentityAsync.Result.Arn);
         
-        this.pollyClient = new AmazonPollyClient();
+        this.pollyClient = new AmazonPollyClient(creds);
 
         this.voices = globalConfiguration.AwsConfiguration.Voices;
         this.bucket = globalConfiguration.AwsConfiguration.BucketName;

@@ -7,6 +7,7 @@ namespace LizardNetRadio.Bot.Startup
     using Castle.MicroKernel.SubSystems.Configuration;
     using Castle.Services.Logging.Log4netIntegration;
     using Castle.Windsor;
+    using LizardNetRadio.Bot.Service;
     using Microsoft.Extensions.Logging;
     using Stwalkerster.Bot.CommandLib.Commands.CommandUtilities;
     using Stwalkerster.Bot.CommandLib.Commands.Interfaces;
@@ -44,7 +45,9 @@ namespace LizardNetRadio.Bot.Startup
                 Classes.FromAssemblyContaining<Installer>().BasedOn<ICommand>().LifestyleTransient(),
                 Component.For<ISupportHelper>().ImplementedBy<SupportHelper>(),
                 Component.For<IIrcClient>().ImplementedBy<IrcClient>(),
-                Component.For<IApplication>().ImplementedBy<Program>()
+                Component.For<IApplication>().ImplementedBy<Program>(),
+                
+                Component.For<ITextToSpeechService>().ImplementedBy<AmazonPollyTTSService>().LifestyleTransient()
             );
         }
     }
