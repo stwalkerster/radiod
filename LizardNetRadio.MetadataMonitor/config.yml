@@ -1,0 +1,13 @@
+---
+logDirectory: /icecast/
+logFilter: playlist.log
+announceQueue: metadata
+
+rabbitMqConfiguration:
+  objectPrefix: radiolizardnet.
+  hostname: localhost
+  port: 5672
+  virtualHost: /
+  username: guest
+  password: guest
+  tls: false

@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LizardNetRadio.Sidecar", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LizardNetRadio.Common", "LizardNetRadio.Common\LizardNetRadio.Common.csproj", "{E6580873-A53C-4E69-A625-EBA51CF38591}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LizardNetRadio.MetadataMonitor", "LizardNetRadio.MetadataMonitor\LizardNetRadio.MetadataMonitor.csproj", "{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{E6580873-A53C-4E69-A625-EBA51CF38591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6580873-A53C-4E69-A625-EBA51CF38591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6580873-A53C-4E69-A625-EBA51CF38591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
