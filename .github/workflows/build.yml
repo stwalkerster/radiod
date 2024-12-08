@@ -98,7 +98,7 @@ jobs:
       uses: docker/build-push-action@v6
       if: github.event_name != 'pull_request'
       with:
-        context: LizardNetRadio.Sidecar/bin/Debug/radiod-metadata/
+        context: LizardNetRadio.MetadataMonitor/bin/Debug/radiod-metadata/
         push: true
         tags: |
           ghcr.io/stwalkerster/radiod:metadata
