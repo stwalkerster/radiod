@@ -35,8 +35,8 @@ provider "aws" {
 
   default_tags {
     tags = {
-      "Terraform"   = "yes"
-      "Project"     = "radiod"
+      "Terraform" = "yes"
+      "Project"   = "radiod"
       "Environment" = "Production"
     }
   }

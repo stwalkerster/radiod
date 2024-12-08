@@ -61,18 +61,3 @@ resource "aws_rolesanywhere_profile" "role" {
   role_arns = [aws_iam_role.radiod.arn]
   enabled   = true
 }
-
-# Legacy IAM user
-
-resource "aws_iam_user" "radiod" {
-  name = "radiod-bot"
-}
-
-resource "aws_iam_user_policy_attachment" "radiod" {
-  policy_arn = aws_iam_policy.radiod.arn
-  user       = aws_iam_user.radiod.name
-}
-
-resource "aws_iam_access_key" "radiod" {
-  user = aws_iam_user.radiod.name
-}
