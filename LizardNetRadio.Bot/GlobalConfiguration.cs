@@ -18,6 +18,7 @@ namespace LizardNetRadio.Bot
         public string CommandPrefix { get; set; }
         public string DefaultChannel { get; set; }
         public string MetadataChannel { get; set; }
+        public List<string> ForbiddenChannels { get; set; }
         
         public string AdminMask { get; set; }
         

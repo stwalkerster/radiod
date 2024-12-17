@@ -9,12 +9,15 @@ using RabbitMQ.Client;
 using Startup;
 using Stwalkerster.Bot.CommandLib.Services.Interfaces;
 using Stwalkerster.IrcClient;
+using Stwalkerster.IrcClient.Events;
 using Stwalkerster.IrcClient.Interfaces;
 using Stwalkerster.IrcClient.Messages;
 using Stwalkerster.IrcClient.Network;
 
 public class Program : IApplication
 {
+    private readonly List<string> forbiddenChannels;
+
     public static void Main(string[] args)
     {
         var configFileName = "config.yml";
@@ -77,6 +80,9 @@ public class Program : IApplication
 
     public Program(IIrcClient client, ICommandHandler commandHandler,  GlobalConfiguration configuration)
     {
+        this.forbiddenChannels = configuration.ForbiddenChannels;
+        
+        client.JoinReceivedEvent += this.ChannelFilter;
         client.ReceivedMessage += commandHandler.OnMessageReceived;
         
         client.WaitOnRegistration();
@@ -92,6 +98,17 @@ public class Program : IApplication
         if (configuration.DefaultChannel != configuration.MetadataChannel)
         {
             client.JoinChannel(configuration.MetadataChannel);
+        }
+    }
+
+    private void ChannelFilter(object sender, JoinEventArgs e)
+    {
+        if (e.User.Nickname == e.Client.Nickname)
+        {
+            if (this.forbiddenChannels.Contains(e.Channel))
+            {
+                e.Client.PartChannel(e.Channel, "Leaving...");
+            }
         }
     }
 

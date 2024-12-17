@@ -2,6 +2,9 @@
 commandPrefix: !
 defaultChannel: "#radio"
 metadataChannel: "#radio-metadata"
+forbiddenChannels:
+  - "#secret"
+
 adminMask: "*!*@staff/*"
 
 hostname: localhost
