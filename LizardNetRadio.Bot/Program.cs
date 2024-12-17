@@ -1,8 +1,11 @@
 ﻿namespace LizardNetRadio.Bot;
 
+using System.Runtime.InteropServices;
+using System.Text;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Common;
+using RabbitMQ.Client;
 using Startup;
 using Stwalkerster.Bot.CommandLib.Services.Interfaces;
 using Stwalkerster.IrcClient;
@@ -27,6 +30,8 @@ public class Program : IApplication
         container.Register(Component.For<GlobalConfiguration>().Instance(config));
         container.Register(Component.For<RabbitMqConfiguration>().Instance(config.RabbitMqConfiguration));
         container.Register(
+            Component.For<IConnection>().Instance(CreateRabbitMqConnection(config.RabbitMqConfiguration)));
+        container.Register(
             Component.For<IIrcConfiguration>()
                 .Instance(
                     new IrcConfiguration(
@@ -41,12 +46,33 @@ public class Program : IApplication
                         servicesCertificate: config.ServicesCertificate,
                         serverPassword:config.ServerPassword
                     )));
-
+        
         container.Install(new Installer());
 
         var app = container.Resolve<IApplication>();
+    }
+
+    private static IConnection CreateRabbitMqConnection(RabbitMqConfiguration config)
+    {
+        var factory = new ConnectionFactory
+        {
+            HostName = config.Hostname,
+            Port = config.Port,
+            VirtualHost = config.VirtualHost,
+            UserName = config.Username,
+            Password = config.Password,
+            ClientProvidedName = "Radio-LizardNetD/0.1 (bot)",
+            ClientProperties = new Dictionary<string, object>
+            {
+                {"product", Encoding.UTF8.GetBytes("Radio LizardNet")},
+                {"platform", Encoding.UTF8.GetBytes(RuntimeInformation.FrameworkDescription)},
+                {"os", Encoding.UTF8.GetBytes(Environment.OSVersion.ToString())}
+            },
+            Ssl = new SslOption{Enabled = config.Tls, ServerName = config.Hostname}
+        };
         
-        
+        var connection = factory.CreateConnection();
+        return connection;
     }
 
     public Program(IIrcClient client, ICommandHandler commandHandler,  GlobalConfiguration configuration)
@@ -62,6 +88,11 @@ public class Program : IApplication
         }
 
         client.JoinChannel(configuration.DefaultChannel);
+        
+        if (configuration.DefaultChannel != configuration.MetadataChannel)
+        {
+            client.JoinChannel(configuration.MetadataChannel);
+        }
     }
 
     public void Stop()

@@ -1,6 +1,5 @@
 namespace LizardNetRadio.Bot.Service;
 
-using System.Runtime.InteropServices;
 using System.Text;
 using Castle.Core;
 using Castle.Core.Logging;
@@ -19,27 +18,9 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
     private readonly string streamName;
     
-    public LiquidSoapClient(GlobalConfiguration config, ILogger logger)
+    public LiquidSoapClient(GlobalConfiguration config, ILogger logger, IConnection connection)
     {
         this.logger = logger;
-        var factory = new ConnectionFactory
-        {
-            HostName = config.RabbitMqConfiguration.Hostname,
-            Port = config.RabbitMqConfiguration.Port,
-            VirtualHost = config.RabbitMqConfiguration.VirtualHost,
-            UserName = config.RabbitMqConfiguration.Username,
-            Password = config.RabbitMqConfiguration.Password,
-            ClientProvidedName = "Radio-LizardNetD/0.1 (bot)",
-            ClientProperties = new Dictionary<string, object>
-            {
-                {"product", Encoding.UTF8.GetBytes("Radio LizardNet")},
-                {"platform", Encoding.UTF8.GetBytes(RuntimeInformation.FrameworkDescription)},
-                {"os", Encoding.UTF8.GetBytes(Environment.OSVersion.ToString())}
-            },
-            Ssl = new SslOption{Enabled = config.RabbitMqConfiguration.Tls, ServerName = config.RabbitMqConfiguration.Hostname}
-        };
-        
-        var connection = factory.CreateConnection();
         this.channel = connection.CreateModel();
 
         this.replyQueueName = config.RabbitMqConfiguration.ObjectPrefix + config.MyQueue;

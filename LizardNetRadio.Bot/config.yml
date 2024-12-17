@@ -1,6 +1,7 @@
 ---
 commandPrefix: !
 defaultChannel: "#radio"
+metadataChannel: "#radio-metadata"
 adminMask: "*!*@staff/*"
 
 hostname: localhost
@@ -15,6 +16,7 @@ operPass: ""
 
 myQueue: reply
 requestQueue: request
+metadataQueue: metadata
 
 streamName: radio
 

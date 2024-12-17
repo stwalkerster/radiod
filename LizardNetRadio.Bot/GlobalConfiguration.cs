@@ -17,6 +17,7 @@ namespace LizardNetRadio.Bot
         
         public string CommandPrefix { get; set; }
         public string DefaultChannel { get; set; }
+        public string MetadataChannel { get; set; }
         
         public string AdminMask { get; set; }
         
@@ -26,6 +27,7 @@ namespace LizardNetRadio.Bot
         
         public string MyQueue { get; set; }
         public string RequestQueue { get; set; }
+        public string MetadataQueue { get; set; }
         
         public string StreamName { get; set; }
     }
