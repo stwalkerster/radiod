@@ -1,5 +1,6 @@
 namespace LizardNetRadio.Bot.Commands;
 
+using System.Web;
 using Microsoft.Extensions.Logging;
 using Service;
 using Stwalkerster.Bot.CommandLib.Attributes;
@@ -51,7 +52,7 @@ public class PlayingCommand : CommandBase
             {
                 new()
                 {
-                    Message = $"Now Playing: {task.Result.artist} - {task.Result.title}{remaining}"
+                    Message = $"Now Playing: {HttpUtility.HtmlDecode(task.Result.artist)} - {HttpUtility.HtmlDecode(task.Result.title)}{remaining}"
                 }
             };
         }

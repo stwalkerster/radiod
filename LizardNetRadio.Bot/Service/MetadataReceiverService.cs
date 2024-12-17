@@ -1,6 +1,7 @@
 namespace LizardNetRadio.Bot.Service;
 
 using System.Text;
+using System.Web;
 using Castle.Core;
 using Castle.Core.Logging;
 using RabbitMQ.Client;
@@ -46,7 +47,7 @@ public class MetadataReceiverService : IMetadataReceiverService
                 return;
             }
             
-            this.ircClient.SendMessage(this.metadataChannel, "Now Playing: " + message[3]);
+            this.ircClient.SendMessage(this.metadataChannel, "Now Playing: " + HttpUtility.HtmlDecode(message[3]));
 
             this.channel.BasicAck(e.DeliveryTag, false);
         }
