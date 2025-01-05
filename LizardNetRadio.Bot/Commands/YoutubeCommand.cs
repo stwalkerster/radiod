@@ -36,6 +36,12 @@ public class YoutubeCommand : CommandBase
         try
         {
             var first = this.Arguments.First().Replace("\\.", ".");
+            
+            if (first.StartsWith('"') && first.EndsWith('"'))
+            {
+                first = first.Substring(1, first.Length - 2);
+            }
+            
             var task = this.liquidSoapClient.Request("youtube-dl:" + first, "request");
             task.Wait();
 
