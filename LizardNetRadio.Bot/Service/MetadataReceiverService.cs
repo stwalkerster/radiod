@@ -37,7 +37,7 @@ public class MetadataReceiverService : IMetadataReceiverService
     {
         try
         {
-            var rawMessage = Encoding.UTF8.GetString(e.Body.ToArray());
+            var rawMessage = Encoding.ASCII.GetString(e.Body.ToArray());
             this.logger.Trace(rawMessage);
             
             var message = rawMessage.Split('|');
