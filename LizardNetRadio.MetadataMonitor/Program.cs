@@ -31,7 +31,6 @@ class Program
     private void Run(GlobalConfiguration config)
     {
         this.logger.InfoFormat("Initialising metadata monitor for {0}...", config.LogDirectory);
-        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         
         this.SetupMq(config);
 
@@ -81,7 +80,7 @@ class Program
     {
         try
         {
-            var lastMetadata = Encoding.GetEncoding(1252).GetString(File.ReadAllBytes(e.FullPath)).Split('\n', StringSplitOptions.RemoveEmptyEntries).Last();
+            var lastMetadata = File.ReadLines(e.FullPath).Last();
             
             this.logger.DebugFormat("Metadata detected: {0}", lastMetadata);
 
