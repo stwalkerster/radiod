@@ -89,7 +89,9 @@ class Program
             
             var isoEncoding = Encoding.GetEncoding("Windows-1252");
             var content = isoEncoding.GetBytes(lastMetadata);
-
+            
+            this.logger.DebugFormat("Content: {0}", Convert.ToHexString(content));
+            
             this.channel.BasicPublish(this.queue, "", props, content);
         }
         catch (Exception exception)

@@ -31,13 +31,24 @@ public class MetadataReceiverService : IMetadataReceiverService
         
         this.consumer = new EventingBasicConsumer(this.channel);
         this.consumer.Received += this.ConsumerOnReceived;
+        
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
     }
 
     private void ConsumerOnReceived(object sender, BasicDeliverEventArgs e)
     {
         try
         {
-            var rawMessage = Encoding.ASCII.GetString(e.Body.ToArray());
+            var body = e.Body.ToArray();
+
+            var bodyHex = BitConverter.ToString(body);
+            bodyHex = bodyHex.Substring(bodyHex.LastIndexOf("7C", StringComparison.Ordinal) + 3);
+            this.logger.Debug($"Received message: {bodyHex}");
+            
+            // var rawMessage = Encoding.UTF8.GetString(e.Body.ToArray());
+            var isoEncoding = Encoding.GetEncoding("Windows-1252");
+            var rawMessage = isoEncoding.GetString(body);
+            // rawMessage = Encoding.UTF8.GetString(Encoding.Convert(isoEncoding, Encoding.UTF8, isoEncoding.GetBytes(rawMessage)));
             this.logger.Trace(rawMessage);
             
             var message = rawMessage.Split('|');

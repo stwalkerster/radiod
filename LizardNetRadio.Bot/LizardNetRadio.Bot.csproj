@@ -19,6 +19,7 @@
         <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
         <PackageReference Include="Stwalkerster.Bot.CommandLib" Version="20.0.159" />
         <PackageReference Include="Stwalkerster.IrcClient" Version="12.0.183" />
+        <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.4" />
     </ItemGroup>
 
     <ItemGroup>
