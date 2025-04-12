@@ -33,7 +33,7 @@ jobs:
           ghcr.io/stwalkerster/radiod
         tags: |
           type=raw,value=bot,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
-          type=ref,event=pr,prefix=bot-
+          type=ref,event=pr,prefix=bot-pr-
           type=sha,prefix=bot-
 
     - name: Metadata for sidecar
@@ -44,7 +44,7 @@ jobs:
           ghcr.io/stwalkerster/radiod
         tags: |
           type=raw,value=sidecar,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
-          type=ref,event=pr,prefix=sidecar-
+          type=ref,event=pr,prefix=sidecar-pr-
           type=sha,prefix=sidecar-
 
     - name: Metadata for metadata monitor
@@ -55,7 +55,7 @@ jobs:
           ghcr.io/stwalkerster/radiod
         tags: |
           type=raw,value=metadata,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
-          type=ref,event=pr,prefix=metadata-
+          type=ref,event=pr,prefix=metadata-pr-
           type=sha,prefix=metadata-
 
     - name: Setup .NET

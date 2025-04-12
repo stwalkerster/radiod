@@ -32,6 +32,20 @@ class Program
     {
         this.logger.InfoFormat("Initialising metadata monitor for {0}...", config.LogDirectory);
         
+        this.SetupMq(config);
+
+        var watcher = new FileSystemWatcher(config.LogDirectory, config.LogFilter);
+        watcher.NotifyFilter = NotifyFilters.LastWrite;
+        
+        watcher.Changed += this.WatcherOnChanged;
+        watcher.EnableRaisingEvents = true;
+        this.logger.InfoFormat("Monitoring enabled on {0}", config.LogFilter);
+        
+        new ManualResetEvent(false).WaitOne();
+    }
+
+    private void SetupMq(GlobalConfiguration config)
+    {
         this.logger.InfoFormat("Using broker at {0}:{1}...", config.RabbitMqConfiguration.Hostname, config.RabbitMqConfiguration.Port);
         
         var factory = new ConnectionFactory
@@ -60,15 +74,6 @@ class Program
         
         this.channel.ExchangeDeclare(this.queue, "direct", true);
         this.channel.QueueBind(this.queue, this.queue, "");
-
-        var watcher = new FileSystemWatcher(config.LogDirectory, config.LogFilter);
-        watcher.NotifyFilter = NotifyFilters.LastWrite;
-        
-        watcher.Changed += this.WatcherOnChanged;
-        watcher.EnableRaisingEvents = true;
-        
-        new ManualResetEvent(false).WaitOne();
-
     }
 
     private void WatcherOnChanged(object sender, FileSystemEventArgs e)
@@ -76,16 +81,17 @@ class Program
         try
         {
             var lastMetadata = File.ReadLines(e.FullPath).Last();
+            
+            this.logger.DebugFormat("Metadata detected: {0}", lastMetadata);
 
             var props = this.channel.CreateBasicProperties();
+            
             var content = Encoding.UTF8.GetBytes(lastMetadata);
-
             this.channel.BasicPublish(this.queue, "", props, content);
         }
         catch (Exception exception)
-        { 
+        {
             this.logger.Error(exception);
         }
-
     }
 }
