@@ -66,6 +66,7 @@ class Program
         
         watcher.Changed += this.WatcherOnChanged;
         watcher.EnableRaisingEvents = true;
+        this.logger.InfoFormat("Monitoring enabled on {0}", config.LogFilter);
         
         new ManualResetEvent(false).WaitOne();
 
@@ -73,8 +74,6 @@ class Program
 
     private void WatcherOnChanged(object sender, FileSystemEventArgs e)
     {
-        var isoEncoding = Encoding.GetEncoding("Windows-1252");
-
         try
         {
             var lastMetadata = File.ReadLines(e.FullPath).Last();
@@ -82,6 +81,8 @@ class Program
             this.logger.DebugFormat("Metadata detected: {0}", lastMetadata);
 
             var props = this.channel.CreateBasicProperties();
+            
+            var isoEncoding = Encoding.GetEncoding("Windows-1252");
             var content = isoEncoding.GetBytes(lastMetadata);
 
             this.channel.BasicPublish(this.queue, "", props, content);
@@ -90,6 +91,5 @@ class Program
         { 
             this.logger.Error(exception);
         }
-
     }
 }
