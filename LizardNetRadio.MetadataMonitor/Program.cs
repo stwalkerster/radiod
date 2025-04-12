@@ -81,23 +81,17 @@ class Program
     {
         try
         {
-            var lastMetadata = File.ReadLines(e.FullPath).Last();
+            var lastMetadata = Encoding.GetEncoding(1252).GetString(File.ReadAllBytes(e.FullPath)).Split('\n').Last();
             
             this.logger.DebugFormat("Metadata detected: {0}", lastMetadata);
 
             var props = this.channel.CreateBasicProperties();
             
-            var isoEncoding = Encoding.GetEncoding("Windows-1252");
-            var content = isoEncoding.GetBytes(lastMetadata);
-            
-            var bodyHex = BitConverter.ToString(content);
-            bodyHex = bodyHex.Substring(bodyHex.LastIndexOf("7C", StringComparison.Ordinal) + 3);
-            this.logger.DebugFormat("Content: {0}", bodyHex);
-            
+            var content = Encoding.UTF8.GetBytes(lastMetadata);
             this.channel.BasicPublish(this.queue, "", props, content);
         }
         catch (Exception exception)
-        { 
+        {
             this.logger.Error(exception);
         }
     }

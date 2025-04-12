@@ -45,9 +45,9 @@ public class MetadataReceiverService : IMetadataReceiverService
             bodyHex = bodyHex.Substring(bodyHex.LastIndexOf("7C", StringComparison.Ordinal) + 3);
             this.logger.Debug($"Received message: {bodyHex}");
             
-            // var rawMessage = Encoding.UTF8.GetString(e.Body.ToArray());
-            var isoEncoding = Encoding.GetEncoding("Windows-1252");
-            var rawMessage = isoEncoding.GetString(body);
+            var rawMessage = Encoding.UTF8.GetString(e.Body.ToArray());
+            // var isoEncoding = Encoding.GetEncoding("Windows-1252");
+            // var rawMessage = isoEncoding.GetString(body);
             // rawMessage = Encoding.UTF8.GetString(Encoding.Convert(isoEncoding, Encoding.UTF8, isoEncoding.GetBytes(rawMessage)));
             this.logger.Trace(rawMessage);
             
