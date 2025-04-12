@@ -73,11 +73,19 @@ class Program
 
     private void WatcherOnChanged(object sender, FileSystemEventArgs e)
     {
-        var lastMetadata = File.ReadLines(e.FullPath).Last();
+        try
+        {
+            var lastMetadata = File.ReadLines(e.FullPath).Last();
 
-        var props = this.channel.CreateBasicProperties();
-        var content = Encoding.UTF8.GetBytes(lastMetadata);
+            var props = this.channel.CreateBasicProperties();
+            var content = Encoding.UTF8.GetBytes(lastMetadata);
 
-        this.channel.BasicPublish(this.queue, "", props, content);
+            this.channel.BasicPublish(this.queue, "", props, content);
+        }
+        catch (Exception exception)
+        { 
+            this.logger.Error(exception);
+        }
+
     }
 }
