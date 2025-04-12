@@ -81,7 +81,7 @@ class Program
     {
         try
         {
-            var lastMetadata = Encoding.GetEncoding(1252).GetString(File.ReadAllBytes(e.FullPath)).Split('\n').Last();
+            var lastMetadata = Encoding.GetEncoding(1252).GetString(File.ReadAllBytes(e.FullPath)).Split('\n', StringSplitOptions.RemoveEmptyEntries).Last();
             
             this.logger.DebugFormat("Metadata detected: {0}", lastMetadata);
 
