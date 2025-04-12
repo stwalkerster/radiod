@@ -10,6 +10,7 @@
     <ItemGroup>
       <PackageReference Include="log4net" Version="2.0.17" />
       <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+      <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.4" />
     </ItemGroup>
 
     <ItemGroup>

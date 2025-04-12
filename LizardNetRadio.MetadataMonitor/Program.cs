@@ -73,12 +73,16 @@ class Program
 
     private void WatcherOnChanged(object sender, FileSystemEventArgs e)
     {
+        var isoEncoding = Encoding.GetEncoding("Windows-1252");
+
         try
         {
             var lastMetadata = File.ReadLines(e.FullPath).Last();
+            
+            this.logger.DebugFormat("Metadata detected: {0}", lastMetadata);
 
             var props = this.channel.CreateBasicProperties();
-            var content = Encoding.UTF8.GetBytes(lastMetadata);
+            var content = isoEncoding.GetBytes(lastMetadata);
 
             this.channel.BasicPublish(this.queue, "", props, content);
         }
