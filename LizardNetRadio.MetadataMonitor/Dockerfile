@@ -2,6 +2,10 @@ FROM mcr.microsoft.com/dotnet/runtime:8.0
 
 ARG GIT_VERSION_HASH=undefined
 
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends xxd && \
+    rm -rf /var/lib/apt/lists/*
+
 WORKDIR /opt
 ADD * /opt
 
