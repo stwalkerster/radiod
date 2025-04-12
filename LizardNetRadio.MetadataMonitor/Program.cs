@@ -90,7 +90,9 @@ class Program
             var isoEncoding = Encoding.GetEncoding("Windows-1252");
             var content = isoEncoding.GetBytes(lastMetadata);
             
-            this.logger.DebugFormat("Content: {0}", Convert.ToHexString(content));
+            var bodyHex = BitConverter.ToString(content);
+            bodyHex = bodyHex.Substring(bodyHex.LastIndexOf("7C", StringComparison.Ordinal) + 3);
+            this.logger.DebugFormat("Content: {0}", bodyHex);
             
             this.channel.BasicPublish(this.queue, "", props, content);
         }
