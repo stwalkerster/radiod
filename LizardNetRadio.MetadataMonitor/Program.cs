@@ -31,7 +31,22 @@ class Program
     private void Run(GlobalConfiguration config)
     {
         this.logger.InfoFormat("Initialising metadata monitor for {0}...", config.LogDirectory);
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         
+        this.SetupMq(config);
+
+        var watcher = new FileSystemWatcher(config.LogDirectory, config.LogFilter);
+        watcher.NotifyFilter = NotifyFilters.LastWrite;
+        
+        watcher.Changed += this.WatcherOnChanged;
+        watcher.EnableRaisingEvents = true;
+        this.logger.InfoFormat("Monitoring enabled on {0}", config.LogFilter);
+        
+        new ManualResetEvent(false).WaitOne();
+    }
+
+    private void SetupMq(GlobalConfiguration config)
+    {
         this.logger.InfoFormat("Using broker at {0}:{1}...", config.RabbitMqConfiguration.Hostname, config.RabbitMqConfiguration.Port);
         
         var factory = new ConnectionFactory
@@ -60,16 +75,6 @@ class Program
         
         this.channel.ExchangeDeclare(this.queue, "direct", true);
         this.channel.QueueBind(this.queue, this.queue, "");
-
-        var watcher = new FileSystemWatcher(config.LogDirectory, config.LogFilter);
-        watcher.NotifyFilter = NotifyFilters.LastWrite;
-        
-        watcher.Changed += this.WatcherOnChanged;
-        watcher.EnableRaisingEvents = true;
-        this.logger.InfoFormat("Monitoring enabled on {0}", config.LogFilter);
-        
-        new ManualResetEvent(false).WaitOne();
-
     }
 
     private void WatcherOnChanged(object sender, FileSystemEventArgs e)
