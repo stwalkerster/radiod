@@ -1,0 +1,3018 @@
+basePath: /home/stwalkerster/Projects/scotrail-announcements-june-2022/announcements/
+
+itemSets:
+  platformNumbers:
+    options:
+      - files:
+          - "1273"
+          - "1275"
+          - "1276"
+          - "1277"
+          - "1278"
+          - "1279"
+          - "1280"
+          - "1281"
+          - "1282"
+          - "1284"
+          - "1285"
+          - "1286"
+          - "1287"
+          - "1289"
+          - "1290"
+          - "1291"
+          - "1292"
+          - "1294"
+          - "1297"
+          - "1299"
+  hours:
+    options:
+      - grammar: "thee"
+        files:
+          - "0231"
+          - "0232"
+          - "0233"
+          - "0234"
+          - "0235"
+          - "0236"
+          - "0237"
+          - "0238"
+          - "0239"
+          - "0248"
+          - "0278"
+      - grammar: "thuh"
+        files:
+          - "0230"
+          - "0240"
+          - "0259"
+          - "0270"
+          - "0274"
+          - "0275"
+          - "0276"
+          - "0277"
+          - "0285"
+          - "0291"
+          - "0295"
+          - "0297"
+          - "0298"
+  minutes:
+    options:
+      - files:
+          - "0300"
+          - "0301"
+          - "0302"
+          - "0308"
+          - "0317"
+          - "0319"
+          - "0320"
+          - "0321"
+          - "0322"
+          - "0323"
+          - "0324"
+          - "0325"
+          - "0326"
+          - "0327"
+          - "0328"
+          - "0330"
+          - "0331"
+          - "0332"
+          - "0333"
+          - "0334"
+          - "0335"
+          - "0336"
+          - "0337"
+          - "0338"
+          - "0339"
+          - "0341"
+          - "0342"
+          - "0343"
+          - "0344"
+          - "0345"
+          - "0346"
+          - "0347"
+          - "0348"
+          - "0349"
+          - "0350"
+          - "0352"
+          - "0353"
+          - "0354"
+          - "0355"
+          - "0356"
+          - "0357"
+          - "0358"
+          - "0359"
+          - "0360"
+          - "0361"
+          - "0365"
+          - "0367"
+          - "0368"
+          - "0369"
+          - "0370"
+          - "0371"
+          - "0372"
+          - "0373"
+          - "0374"
+          - "0375"
+          - "0377"
+          - "0378"
+          - "0379"
+          - "0380"
+          - "0381"
+  tocServiceTo:
+    options:
+      - files:
+          - "0575"
+          - "0649"
+          - "0216"
+          - "1852"
+          - "0657"
+          - "0710"
+          - "0460"
+          - "0008"
+          - "0033"
+          - "1851"
+          - "0203"
+          - "0199"
+          - "0122"
+          - "0456"
+          - "0464"
+          - "0708"
+  isThe:
+    options:
+      - grammar: "thee"
+        files: [ "1211" ]
+      - grammar: "thuh"
+        files: [ "1206" ]
+  reason:
+    options:
+      - files:
+          - "0152"
+          - "0451"
+          - "0453"
+          - "0669"
+          - "0738"
+          - "0739"
+          - "0740"
+          - "0741"
+          - "0742"
+          - "0743"
+          - "0744"
+          - "0745"
+          - "0746"
+          - "0747"
+          - "0748"
+          - "0749"
+          - "0750"
+          - "0751"
+          - "0752"
+          - "0753"
+          - "0754"
+          - "0755"
+          - "0756"
+          - "0757"
+          - "0759"
+          - "0760"
+          - "0761"
+          - "0762"
+          - "0763"
+          - "0764"
+          - "0765"
+          - "0766"
+          - "0767"
+          - "0768"
+          - "0770"
+          - "0771"
+          - "0772"
+          - "0773"
+          - "0774"
+          - "0775"
+          - "0776"
+          - "0777"
+          - "0778"
+          - "0779"
+          - "0780"
+          - "0781"
+          - "0782"
+          - "0783"
+          - "0784"
+          - "0785"
+          - "0786"
+          - "0787"
+          - "0788"
+          - "0789"
+          - "0790"
+          - "0791"
+          - "0792"
+          - "0793"
+          - "0794"
+          - "0795"
+          - "0796"
+          - "0797"
+          - "0798"
+          - "0799"
+          - "0800"
+          - "0801"
+          - "0802"
+          - "0803"
+          - "0804"
+          - "0805"
+          - "0806"
+          - "0807"
+          - "0808"
+          - "0809"
+          - "0810"
+          - "0811"
+          - "0812"
+          - "0813"
+          - "0814"
+          - "0815"
+          - "0816"
+          - "0817"
+          - "0818"
+          - "0819"
+          - "0820"
+          - "0821"
+          - "0822"
+          - "0823"
+          - "0824"
+          - "0825"
+          - "0826"
+          - "0827"
+          - "0828"
+          - "0829"
+          - "0830"
+          - "0831"
+          - "0832"
+          - "0833"
+          - "0834"
+          - "0835"
+          - "0836"
+          - "0837"
+          - "0838"
+          - "0839"
+          - "0841"
+          - "0842"
+          - "0843"
+          - "0844"
+          - "0845"
+          - "0846"
+          - "0847"
+          - "0848"
+          - "0849"
+          - "0850"
+          - "0852"
+          - "0853"
+          - "0854"
+          - "0855"
+          - "0856"
+          - "0857"
+          - "0858"
+          - "0859"
+          - "0860"
+          - "0861"
+          - "0862"
+          - "0863"
+          - "0864"
+          - "0865"
+          - "0866"
+          - "0867"
+          - "0868"
+          - "0869"
+          - "0870"
+          - "0871"
+          - "0872"
+          - "0873"
+          - "0874"
+          - "0875"
+          - "0876"
+          - "0877"
+          - "0878"
+          - "0879"
+          - "0880"
+          - "0881"
+          - "0882"
+          - "0883"
+          - "0884"
+          - "0885"
+          - "0886"
+          - "0887"
+          - "0888"
+          - "0889"
+          - "0890"
+          - "0891"
+          - "0892"
+          - "0893"
+          - "0894"
+          - "0895"
+          - "0896"
+          - "0897"
+          - "0898"
+          - "0899"
+          - "0900"
+          - "0901"
+          - "0902"
+          - "0903"
+          - "0904"
+          - "0905"
+          - "0906"
+          - "0907"
+          - "0908"
+          - "0909"
+          - "0910"
+          - "0911"
+          - "0913"
+          - "0914"
+          - "0915"
+          - "0916"
+          - "0917"
+          - "0918"
+          - "0919"
+          - "0920"
+          - "0921"
+          - "0922"
+          - "0923"
+          - "0924"
+          - "0925"
+          - "0926"
+          - "0927"
+          - "0928"
+          - "0929"
+          - "0930"
+          - "0931"
+          - "0932"
+          - "0934"
+          - "0935"
+          - "0936"
+          - "0937"
+          - "0938"
+          - "0939"
+          - "0940"
+          - "0941"
+          - "0942"
+          - "0943"
+          - "0945"
+          - "0946"
+          - "0947"
+          - "0948"
+          - "0949"
+          - "0950"
+          - "0951"
+          - "0952"
+          - "0953"
+          - "0954"
+          - "0956"
+          - "0957"
+          - "0958"
+          - "0959"
+          - "0960"
+          - "0961"
+          - "0962"
+          - "0963"
+          - "0964"
+          - "0965"
+          - "0966"
+          - "0967"
+          - "0968"
+          - "0969"
+          - "0970"
+          - "0971"
+          - "0972"
+          - "0973"
+          - "0974"
+          - "0975"
+          - "0976"
+          - "0977"
+          - "0978"
+          - "0979"
+          - "0980"
+          - "0981"
+          - "0982"
+          - "0983"
+          - "0984"
+          - "0985"
+          - "0986"
+          - "0987"
+          - "0988"
+          - "0989"
+          - "0990"
+          - "0991"
+          - "0992"
+          - "0993"
+          - "0994"
+          - "0995"
+          - "0997"
+          - "0998"
+          - "0999"
+          - "1000"
+          - "1001"
+          - "1002"
+          - "1003"
+          - "1004"
+          - "1005"
+          - "1006"
+          - "1007"
+          - "1008"
+          - "1009"
+          - "1010"
+          - "1011"
+          - "1012"
+          - "1013"
+          - "1014"
+          - "1015"
+          - "1016"
+          - "1017"
+          - "1018"
+          - "1019"
+          - "1020"
+          - "1021"
+          - "1022"
+          - "1023"
+          - "1024"
+          - "1025"
+          - "1026"
+          - "1027"
+          - "1028"
+          - "1029"
+          - "1030"
+          - "1031"
+          - "1032"
+          - "1033"
+          - "1034"
+          - "1035"
+          - "1036"
+          - "1037"
+          - "1038"
+          - "1039"
+          - "1040"
+          - "1041"
+          - "1042"
+          - "1043"
+          - "1044"
+          - "1045"
+          - "1046"
+          - "1047"
+          - "1048"
+          - "1049"
+          - "1050"
+          - "1051"
+          - "1052"
+          - "1053"
+          - "1054"
+          - "1055"
+          - "1056"
+          - "1057"
+          - "1058"
+          - "1059"
+          - "1060"
+          - "1061"
+          - "1062"
+          - "1063"
+          - "1064"
+          - "1065"
+          - "1066"
+          - "1067"
+          - "1068"
+          - "1069"
+          - "1070"
+          - "1071"
+          - "1072"
+          - "1073"
+          - "1074"
+          - "1075"
+          - "1076"
+          - "1077"
+          - "1078"
+          - "1079"
+          - "1080"
+          - "1081"
+          - "1082"
+          - "1083"
+          - "1084"
+          - "1085"
+          - "1086"
+          - "1088"
+          - "1089"
+          - "1090"
+          - "1091"
+          - "1092"
+          - "1093"
+          - "1094"
+          - "1095"
+          - "1096"
+          - "1097"
+          - "1099"
+          - "1100"
+          - "1101"
+          - "1102"
+          - "1103"
+          - "1104"
+          - "1105"
+          - "1106"
+          - "1107"
+          - "1108"
+          - "1109"
+          - "1110"
+          - "1111"
+          - "1112"
+          - "1113"
+          - "1114"
+          - "1115"
+          - "1116"
+          - "1117"
+          - "1118"
+          - "1119"
+          - "1120"
+          - "1121"
+          - "1122"
+          - "1123"
+          - "1124"
+          - "1125"
+          - "1126"
+          - "1127"
+          - "1128"
+          - "1129"
+          - "1130"
+          - "1131"
+          - "1132"
+          - "1133"
+          - "1134"
+          - "1135"
+          - "1136"
+          - "1137"
+          - "1138"
+          - "1139"
+          - "1140"
+          - "1141"
+          - "1142"
+          - "1143"
+          - "1144"
+          - "1145"
+          - "1146"
+          - "1147"
+          - "1148"
+          - "1150"
+          - "1151"
+          - "1152"
+          - "1153"
+          - "1154"
+          - "1155"
+          - "1156"
+          - "1157"
+          - "1158"
+          - "1159"
+          - "1384"
+  sorryToAnnounce:
+    options:
+      - grammar: "thee"
+        files: [ "0085" ]
+      - grammar: "thuh"
+        files: [ "1700" ]
+  isDelayed:
+    options:
+      - files:
+          - "0110"
+          - "0111"
+          - "0112"
+          - "0113"
+          - "0114"
+          - "0115"
+          - "0116"
+          - "0117"
+          - "0118"
+          - "0119"
+          - "0120"
+          - "0121"
+          - "1231"
+
+stations:
+  - nre: WBQ
+    mid: 0003
+    end: 1272
+    name: Warrington Bank Quay
+  - nre: BTH
+    mid: 0006
+    end: 1274
+    name: Bath Spa
+  - nre: HEX
+    mid: 0083
+    end: 1283
+    name: Hexham
+  - nre: SOU
+    mid: 0212
+    end: 1293
+    name: Southampton Central
+  - nre: STA
+    mid: 0218
+    end: 1295
+    name: Stafford
+  - nre: SCS
+    mid: 0219
+    end: 1296
+    name: Starcross
+  - nre: TRO
+    mid: 0221
+    end: 1300
+    name: Trowbridge
+  - nre: GRH
+    mid: 0222
+    end: 0362
+    name: Gartcosh
+  - nre: COR
+    mid: 0224
+    end: 0364
+    name: Corby
+  - nre: STP
+    mid: 0225
+    end: 0366
+    name: St Pancras International
+  - nre: STP
+    mid: 0225
+    end: 1187
+    name: St Pancras International
+  - nre: WML
+    mid: 0226
+    end: 1301
+    name: Wilmslow
+  - nre: SOA
+    mid: 0228
+    end: 1302
+    name: Southampton Airport Parkway
+  - nre: BYL
+    mid: 0241
+    end: 0390
+    name: Barry Links
+  - nre: BEL
+    mid: 0242
+    end: 0391
+    name: Beauly
+  - nre: BSU
+    mid: 0243
+    end: 0392
+    name: Brunstane
+  - nre: DFL
+    mid: 0245
+    end: 0394
+    name: Dunfermline Queen Margaret
+  - nre: DFE
+    mid: 0246
+    end: 0395
+    name: Dunfermline Town
+  - nre: EXG
+    mid: 0249
+    end: 0397
+    name: Exhibition Centre
+  - nre: GGJ
+    mid: 0250
+    end: 0398
+    name: Georgemas
+  - nre: GSC
+    mid: 0251
+    end: 0399
+    name: Gilshochill
+  - nre: GRL
+    mid: 0252
+    end: 0400
+    name: Greenfaulds
+  - nre: GRL
+    mid: 0252
+    end: 2264
+    name: Greenfaulds
+  - nre: HNW
+    mid: 0253
+    end: 0401
+    name: Hamilton West
+  - nre: HKH
+    mid: 0254
+    end: 0402
+    name: Hawkhead
+  - nre: HST
+    mid: 0255
+    end: 0403
+    name: High Street
+  - nre: LHA
+    mid: 0256
+    end: 0404
+    name: Loch Awe
+  - nre: NEW
+    mid: 0257
+    end: 0405
+    name: Newcraighall
+  - nre: RAN
+    mid: 0261
+    end: 0408
+    name: Rannoch
+  - nre: KGE
+    mid: 0262
+    end: 0409
+    name: Kingsknowe
+  - nre: STF
+    mid: 0263
+    end: 0410
+    name: Stromeferry
+  - nre: GLC
+    mid: 0264
+    end: 0411
+    name: Glasgow Central Low Level
+  - nre: GLC
+    mid: 0264
+    end: 0725
+    name: Glasgow Central Low Level
+  - nre: GLQ
+    mid: 0265
+    end: 0412
+    name: Glasgow Queen Street Low Level
+  - nre: GLQ
+    mid: 0265
+    end: 0726
+    name: Glasgow Queen Street Low Level
+  - nre: NTN
+    mid: 0266
+    end: 0413
+    name: Newton (Lanarkshire)
+  - nre: BMP
+    mid: 0271
+    end: 0417
+    name: Brampton (Cumbria)
+  - nre: KRK
+    mid: 0273
+    end: 0419
+    name: Kirkconnel
+  - nre: KVD
+    mid: 0280
+    end: 0421
+    name: Kelvindale
+  - nre: MEY
+    mid: 0281
+    end: 0422
+    name: Merryton
+  - nre: LRH
+    mid: 0282
+    end: 0423
+    name: Larkhall
+  - nre: CTE
+    mid: 0283
+    end: 0424
+    name: Chatelherault
+  - nre: ALO
+    mid: 0284
+    end: 0425
+    name: Alloa
+  - nre: SFI
+    mid: 0286
+    end: 0426
+    name: Shawfair
+  - nre: EKB
+    mid: 0287
+    end: 0427
+    name: Eskbank
+  - nre: NEG
+    mid: 0288
+    end: 0428
+    name: Newtongrange
+  - nre: GBG
+    mid: 0289
+    end: 0429
+    name: Gorebridge
+  - nre: GAL
+    mid: 0290
+    end: 0430
+    name: Galashiels
+  - nre: TWB
+    mid: 0292
+    end: 0432
+    name: Tweedbank
+  - nre: LPY
+    mid: 0304
+    end: 0436
+    name: Liverpool South Parkway
+  - nre: FMT
+    mid: 0306
+    end: 0439
+    name: Falmouth
+  - nre: SPH
+    mid: 0311
+    end: 0443
+    name: Shepherd's Bush
+  - nre: SFA
+    mid: 0314
+    end: 0446
+    name: Stratford International
+  - nre: WHA
+    mid: 0315
+    end: 0447
+    name: Westenhanger Racecourse
+  - nre: AFV
+    mid: 0586
+    end: 1659
+    name: Ansdell & Fairhaven
+  - nre: AWT
+    mid: 0591
+    end: 1665
+    name: Armathwaite
+  - nre: BTB
+    mid: 0607
+    end: 1684
+    name: Barnetby
+  - nre: BIY
+    mid: 0627
+    end: 1713
+    name: Bingley
+  - nre: BTN
+    mid: 0661
+    end: 1747
+    name: Brighton
+  - nre: CTR
+    mid: 0690
+    end: 1792
+    name: Chester
+  - nre: CTW
+    mid: 0696
+    end: 1798
+    name: Church and Oswaldtwistle
+  - nre: CBD
+    mid: 0705
+    end: 0733
+    name: Conon Bridge
+  - nre: EGY
+    mid: 0706
+    end: 0734
+    name: ...Edinburgh Gateway...
+  - nre: SOI
+    mid: 0707
+    end: 0735
+    name: Stow...
+  - nre: KIN
+    mid: 0722
+    end: 1405
+    name: Kingussie
+  - nre: HYM
+    mid: 0730
+    end: 1868
+    name: Haymarket
+  - nre: KTR
+    mid: 1161
+    end: 1216
+    name: Kintore
+  - nre: OXF
+    mid: 1217
+    end: 1986
+    name: Oxford
+  - nre: TGM
+    mid: 1258
+    end: 2355
+    name: Teignmouth
+  - nre: PNR
+    mid: 1365
+    end: 1537
+    name: Penrith North Lakes
+  - nre: DYC
+    mid: 1366
+    end: 1538
+    name: Dyce
+  - nre: INR
+    mid: 1367
+    end: 1539
+    name: Inverurie
+  - nre: INS
+    mid: 1368
+    end: 1540
+    name: Insch
+  - nre: HNT
+    mid: 1369
+    end: 1541
+    name: Huntly
+  - nre: KEH
+    mid: 1370
+    end: 1542
+    name: Keith
+  - nre: ELG
+    mid: 1371
+    end: 1543
+    name: Elgin
+  - nre: FOR
+    mid: 1372
+    end: 1544
+    name: Forres
+  - nre: NRN
+    mid: 1373
+    end: 1545
+    name: Nairn
+  - nre: MTC
+    mid: 1379
+    end: 1548
+    name: Mitcham Eastfields
+  - nre: BLL
+    mid: 1408
+    end: 1555
+    name: Bardon Mill
+  - nre: BLO
+    mid: 1409
+    end: 1556
+    name: Blaydon
+  - nre: CRB
+    mid: 1411
+    end: 1558
+    name: Corbridge
+  - nre: DOT
+    mid: 1412
+    end: 1559
+    name: Dunston
+  - nre: HTW
+    mid: 1413
+    end: 1560
+    name: Hartwood
+  - nre: HLY
+    mid: 1414
+    end: 1561
+    name: Holytown
+  - nre: HWH
+    mid: 1415
+    end: 1562
+    name: Haltwhistle
+  - nre: HDB
+    mid: 1416
+    end: 1563
+    name: Haydon Bridge
+  - nre: ING
+    mid: 1417
+    end: 1565
+    name: Invergowrie
+  - nre: PRU
+    mid: 1418
+    end: 1566
+    name: Prudhoe
+  - nre: JHN
+    mid: 1419
+    end: 1567
+    name: Johnstone
+  - nre: SKS
+    mid: 1421
+    end: 1569
+    name: Stocksfield
+  - nre: WRL
+    mid: 1422
+    end: 1570
+    name: Wetheral
+  - nre: WGN
+    mid: 1423
+    end: 1571
+    name: Wigan North Western
+  - nre: WYM
+    mid: 1424
+    end: 1572
+    name: Wylam
+  - nre: KGH
+    mid: 1425
+    end: 1573
+    name: Kinghorn
+  - nre: KKN
+    mid: 1427
+    end: 1575
+    name: Kirknewton
+  - nre: LBT
+    mid: 1430
+    end: 1578
+    name: Larbert
+  - nre: LNZ
+    mid: 1431
+    end: 1579
+    name: Lenzie
+  - nre: LSN
+    mid: 1433
+    end: 1581
+    name: Livingston North
+  - nre: LVG
+    mid: 1434
+    end: 1582
+    name: Livingston South
+  - nre: LCG
+    mid: 1435
+    end: 1583
+    name: Lochgelly
+  - nre: LND
+    mid: 1436
+    end: 1584
+    name: Longniddry
+  - nre: MON
+    mid: 1437
+    end: 1585
+    name: Monifieth
+  - nre: NWR
+    mid: 1439
+    end: 1586
+    name: Newtonmore
+  - nre: NBW
+    mid: 1440
+    end: 1587
+    name: North Berwick
+  - nre: NQU
+    mid: 1441
+    end: 1588
+    name: North Queensferry
+  - nre: CHC
+    mid: 1442
+    end: 1589
+    name: Charing Cross
+  - nre: PIT
+    mid: 1443
+    end: 1590
+    name: Pitlochry
+  - nre: PMT
+    mid: 1444
+    end: 1591
+    name: Polmont
+  - nre: PST
+    mid: 1445
+    end: 1592
+    name: Prestonpans
+  - nre: LAU
+    mid: 1447
+    end: 1594
+    name: Laurencekirk
+  - nre: ROS
+    mid: 1448
+    end: 1595
+    name: Rosyth
+  - nre: SHS
+    mid: 1449
+    end: 1596
+    name: Shotts
+  - nre: SLA
+    mid: 1450
+    end: 1597
+    name: Slateford
+  - nre: SGL
+    mid: 1451
+    end: 1598
+    name: South Gyle
+  - nre: STG
+    mid: 1452
+    end: 1599
+    name: Stirling
+  - nre: AVM
+    mid: 1453
+    end: 1600
+    name: Aviemore
+  - nre: BSI
+    mid: 1454
+    end: 1601
+    name: Balmossie
+  - nre: BHG
+    mid: 1455
+    end: 1602
+    name: Bathgate
+  - nre: BLH
+    mid: 1456
+    end: 1603
+    name: Bellshill
+  - nre: BBG
+    mid: 1457
+    end: 1604
+    name: Bishopbriggs
+  - nre: BLA
+    mid: 1458
+    end: 1605
+    name: Blair Atholl
+  - nre: BEA
+    mid: 1459
+    end: 1606
+    name: Bridge of Allan
+  - nre: BRC
+    mid: 1460
+    end: 1607
+    name: Breich
+  - nre: BYF
+    mid: 1461
+    end: 1608
+    name: Broughty Ferry
+  - nre: BTS
+    mid: 1462
+    end: 1610
+    name: Burntisland
+  - nre: CBL
+    mid: 1463
+    end: 1611
+    name: Cambuslang
+  - nre: CMO
+    mid: 1464
+    end: 1612
+    name: Camelon
+  - nre: CDD
+    mid: 1465
+    end: 1613
+    name: Cardenden
+  - nre: CRF
+    mid: 1466
+    end: 1614
+    name: Carfin
+  - nre: CAN
+    mid: 1467
+    end: 0686
+    name: Carnoustie
+  - nre: CAG
+    mid: 1468
+    end: 1616
+    name: Carrbridge
+  - nre: CEA
+    mid: 1469
+    end: 1617
+    name: Cleland
+  - nre: COW
+    mid: 1470
+    end: 1618
+    name: Cowdenbeath
+  - nre: CRO
+    mid: 1471
+    end: 1619
+    name: Croy
+  - nre: UDD
+    mid: 1472
+    end: 1620
+    name: Uddingston
+  - nre: UHA
+    mid: 1473
+    end: 1621
+    name: Uphall
+  - nre: CUH
+    mid: 1474
+    end: 1622
+    name: Curriehill
+  - nre: DAM
+    mid: 1475
+    end: 1623
+    name: Dalmeny
+  - nre: DLW
+    mid: 1476
+    end: 1624
+    name: Dalwhinnie
+  - nre: DRM
+    mid: 1477
+    end: 1625
+    name: Drem
+  - nre: DBL
+    mid: 1478
+    end: 1626
+    name: Dunblane
+  - nre: DKD
+    mid: 1479
+    end: 1627
+    name: Dunkeld & Birnam
+  - nre: EDB
+    mid: 1480
+    end: 1628
+    name: Edinburgh Waverley
+  - nre: FLD
+    mid: 1481
+    end: 1630
+    name: Fauldhouse
+  - nre: GLE
+    mid: 1482
+    end: 1631
+    name: Gleneagles
+  - nre: GLT
+    mid: 1483
+    end: 1632
+    name: Glenrothes with Thornton
+  - nre: GOF
+    mid: 1484
+    end: 1633
+    name: Golf Street
+  - nre: WAF
+    mid: 1485
+    end: 1635
+    name: Wallyford
+  - nre: WCL
+    mid: 1486
+    end: 1636
+    name: West Calder
+  - nre: WTA
+    mid: 1487
+    end: 1637
+    name: Wester Hailes
+  - nre: AUR
+    mid: 1489
+    end: 1641
+    name: Aberdour
+  - nre: RDM
+    mid: 1568
+    end: 1420
+    name: Riding Mill
+  - nre: ABD
+    mid: 1647
+    end: 0578
+    name: Aberdeen
+  - nre: ACR
+    mid: 1648
+    end: 0579
+    name: Accrington
+  - nre: ADC
+    mid: 1649
+    end: 0580
+    name: Adlington
+  - nre: HOZ
+    mid: 1651
+    end: 1784
+    name: Howwood
+  - nre: MKC
+    mid: 1652
+    end: 1786
+    name: Milton Keynes Central
+  - nre: ALM
+    mid: 1653
+    end: 0581
+    name: Alnmouth
+  - nre: ALN
+    mid: 1654
+    end: 0582
+    name: Althorpe
+  - nre: RUG
+    mid: 1655
+    end: 1788
+    name: Rugby
+  - nre: CHU
+    mid: 1656
+    end: 0583
+    name: Cheadle Hulme
+  - nre: ANN
+    mid: 1657
+    end: 0584
+    name: Annan
+  - nre: APP
+    mid: 1660
+    end: 0587
+    name: Appleby
+  - nre: WFJ
+    mid: 1661
+    end: 1789
+    name: Watford Junction
+  - nre: APB
+    mid: 1662
+    end: 0588
+    name: Appley Bridge
+  - nre: ARB
+    mid: 1663
+    end: 0589
+    name: Arbroath
+  - nre: ADK
+    mid: 1664
+    end: 0590
+    name: Ardwick
+  - nre: GTR
+    mid: 1666
+    end: 0592
+    name: Goostrey
+  - nre: ARR
+    mid: 1667
+    end: 0593
+    name: Arram
+  - nre: ABY
+    mid: 1668
+    end: 0594
+    name: Ashburys
+  - nre: AHN
+    mid: 1669
+    end: 0595
+    name: Ashton-under-Lyne
+  - nre: ATN
+    mid: 1670
+    end: 0596
+    name: Atherton
+  - nre: ATB
+    mid: 1672
+    end: 0598
+    name: Attenborough
+  - nre: KTL
+    mid: 1673
+    end: 0599
+    name: Kirton Lindsey
+  - nre: AUK
+    mid: 1674
+    end: 0600
+    name: Auchinleck
+  - nre: AYR
+    mid: 1675
+    end: 0601
+    name: Ayr
+  - nre: BLD
+    mid: 1678
+    end: 0602
+    name: Baildon
+  - nre: BMB
+    mid: 1680
+    end: 0603
+    name: Bamber Bridge
+  - nre: BAM
+    mid: 1681
+    end: 0604
+    name: Bamford
+  - nre: BAN
+    mid: 1682
+    end: 0605
+    name: Banbury
+  - nre: BAR
+    mid: 1683
+    end: 0606
+    name: Bare Lane
+  - nre: BNY
+    mid: 1686
+    end: 0609
+    name: Barnsley
+  - nre: BRR
+    mid: 1689
+    end: 0610
+    name: Barrhead
+  - nre: BRL
+    mid: 1690
+    end: 0611
+    name: Barrhill
+  - nre: BSK
+    mid: 1692
+    end: 0612
+    name: Basingstoke
+  - nre: CEF
+    mid: 1694
+    end: 2377
+    name: Chapel-en-le-Frith
+  - nre: BDM
+    mid: 1695
+    end: 0613
+    name: Bedford
+  - nre: BEE
+    mid: 1696
+    end: 0614
+    name: Beeston
+  - nre: BLV
+    mid: 1697
+    end: 0615
+    name: Belle Vue
+  - nre: BEM
+    mid: 1698
+    end: 0616
+    name: Bempton
+  - nre: BEY
+    mid: 1699
+    end: 0617
+    name: Ben Rhydding
+  - nre: BEN
+    mid: 1702
+    end: 0619
+    name: Bentham
+  - nre: BYK
+    mid: 1703
+    end: 0620
+    name: Bentley
+  - nre: BBW
+    mid: 1705
+    end: 0621
+    name: Berry Brow
+  - nre: BRK
+    mid: 1706
+    end: 0622
+    name: Berwick
+  - nre: BES
+    mid: 1708
+    end: 0624
+    name: Bescar Lane
+  - nre: BEV
+    mid: 1711
+    end: 0625
+    name: Beverley
+  - nre: BIL
+    mid: 1712
+    end: 0626
+    name: Billingham
+  - nre: BWD
+    mid: 1714
+    end: 0628
+    name: Birchwood
+  - nre: BHI
+    mid: 1717
+    end: 0630
+    name: Birmingham International
+  - nre: BHM
+    mid: 1718
+    end: 0631
+    name: Birmingham New Street
+  - nre: BBN
+    mid: 1721
+    end: 0633
+    name: Blackburn
+  - nre: BPN
+    mid: 1722
+    end: 0634
+    name: Blackpool North
+  - nre: BPB
+    mid: 1723
+    end: 0635
+    name: Blackpool Pleasure Beach
+  - nre: BPS
+    mid: 1724
+    end: 0636
+    name: Blackpool South
+  - nre: EDP
+    mid: 1726
+    end: 0637
+    name: Edinburgh Park
+  - nre: BLK
+    mid: 1729
+    end: 0639
+    name: Blackrod
+  - nre: BOD
+    mid: 1733
+    end: 0640
+    name: Bodmin Parkway
+  - nre: BON
+    mid: 1735
+    end: 0642
+    name: Bolton
+  - nre: BMH
+    mid: 1736
+    end: 0643
+    name: Bournemouth
+  - nre: BDQ
+    mid: 1737
+    end: 0644
+    name: Bradford Forster Square
+  - nre: BDI
+    mid: 1739
+    end: 0645
+    name: Bradford Interchange
+  - nre: BLE
+    mid: 1740
+    end: 0646
+    name: Bramley
+  - nre: BSM
+    mid: 1741
+    end: 0651
+    name: Branksome
+  - nre: BDY
+    mid: 1742
+    end: 0652
+    name: Bredbury
+  - nre: BGN
+    mid: 1744
+    end: 0655
+    name: Bridgend
+  - nre: BWT
+    mid: 1745
+    end: 0659
+    name: Bridgwater
+  - nre: BDT
+    mid: 1746
+    end: 0660
+    name: Bridlington
+  - nre: BGH
+    mid: 1749
+    end: 0662
+    name: Brighouse
+  - nre: BPW
+    mid: 1753
+    end: 0663
+    name: Bristol Parkway
+  - nre: BRI
+    mid: 1755
+    end: 0664
+    name: Bristol Temple Meads
+  - nre: BGE
+    mid: 1759
+    end: 0665
+    name: Broad Green
+  - nre: BCU
+    mid: 1760
+    end: 0666
+    name: Brockenhurst
+  - nre: BGL
+    mid: 1764
+    end: 0667
+    name: Bugle
+  - nre: BNA
+    mid: 1768
+    end: 0670
+    name: Burnage
+  - nre: BUD
+    mid: 1769
+    end: 0671
+    name: Burneside
+  - nre: MCO
+    mid: 1770
+    end: 0672
+    name: Manchester Oxford Road
+  - nre: BCB
+    mid: 1772
+    end: 0674
+    name: Burscough Bridge
+  - nre: BUT
+    mid: 1773
+    end: 0675
+    name: Burton-on-Trent
+  - nre: BSE
+    mid: 1774
+    end: 0676
+    name: Bury St Edmunds
+  - nre: CBN
+    mid: 1775
+    end: 0677
+    name: Camborne
+  - nre: CBG
+    mid: 1776
+    end: 0678
+    name: Cambridge
+  - nre: CDB
+    mid: 1779
+    end: 0681
+    name: Cardiff Bute Road
+  - nre: CDF
+    mid: 1780
+    end: 0682
+    name: Cardiff Central
+  - nre: CDQ
+    mid: 1781
+    end: 0683
+    name: Cardiff Queen Street
+  - nre: CAK
+    mid: 1782
+    end: 0684
+    name: Cark
+  - nre: CAR
+    mid: 1783
+    end: 0685
+    name: Carlisle
+  - nre: CRS
+    mid: 1787
+    end: 0687
+    name: Carstairs
+  - nre: CNM
+    mid: 1790
+    end: 0688
+    name: Cheltenham Spa
+  - nre: CYT
+    mid: 1791
+    end: 0689
+    name: Cherry Tree
+  - nre: CHD
+    mid: 1793
+    end: 0691
+    name: Chesterfield
+  - nre: CLS
+    mid: 1794
+    end: 0692
+    name: Chester-le-Street
+  - nre: CLY
+    mid: 1795
+    end: 0693
+    name: Chinley
+  - nre: CRL
+    mid: 1796
+    end: 0694
+    name: Chorley
+  - nre: CHF
+    mid: 1797
+    end: 0695
+    name: Church Fenton
+  - nre: COV
+    mid: 1799
+    end: 0697
+    name: Coventry
+  - nre: CRE
+    mid: 1800
+    end: 0698
+    name: Crewe
+  - nre: CMY
+    mid: 1804
+    end: 0699
+    name: Crossmyloof
+  - nre: CUP
+    mid: 1805
+    end: 0700
+    name: Cupar
+  - nre: CPM
+    mid: 1806
+    end: 1858
+    name: Chippenham
+  - nre: DAR
+    mid: 1807
+    end: 0701
+    name: Darlington
+  - nre: DWL
+    mid: 1808
+    end: 0702
+    name: Dawlish
+  - nre: DWW
+    mid: 1809
+    end: 0703
+    name: Dawlish Warren
+  - nre: DBY
+    mid: 1810
+    end: 0704
+    name: Derby
+  - nre: DON
+    mid: 1811
+    end: 0712
+    name: Doncaster
+  - nre: DMF
+    mid: 1816
+    end: 0713
+    name: Dumfries
+  - nre: DUN
+    mid: 1818
+    end: 0714
+    name: Dunbar
+  - nre: DEE
+    mid: 1819
+    end: 0715
+    name: Dundee
+  - nre: AIR
+    mid: 1820
+    end: 1884
+    name: Airbles
+  - nre: ASS
+    mid: 1823
+    end: 1887
+    name: Alness
+  - nre: ABC
+    mid: 1824
+    end: 1888
+    name: Altnabreac
+  - nre: DNL
+    mid: 1825
+    end: 0716
+    name: Dunlop
+  - nre: DHM
+    mid: 1826
+    end: 0717
+    name: Durham
+  - nre: DPT
+    mid: 1827
+    end: 1889
+    name: Devonport
+  - nre: DOC
+    mid: 1828
+    end: 1890
+    name: Dockyard
+  - nre: EXT
+    mid: 1829
+    end: 1892
+    name: Exeter St Thomas
+  - nre: MKM
+    mid: 1830
+    end: 1895
+    name: Melksham
+  - nre: MEN
+    mid: 1831
+    end: 1896
+    name: Menheniot
+  - nre: EXD
+    mid: 1835
+    end: 0719
+    name: Exeter St. Davids
+  - nre: FKK
+    mid: 1836
+    end: 0720
+    name: Falkirk High
+  - nre: STS
+    mid: 1837
+    end: 1899
+    name: Saltash
+  - nre: SAD
+    mid: 1838
+    end: 1900
+    name: Sandwell and Dudley
+  - nre: FKG
+    mid: 1839
+    end: 0721
+    name: Falkirk Grahamston
+  - nre: SBF
+    mid: 1840
+    end: 1902
+    name: St Budeaux Ferry Road
+  - nre: SGM
+    mid: 1841
+    end: 1903
+    name: St Germans
+  - nre: GIR
+    mid: 1846
+    end: 0724
+    name: Girvan
+  - nre: GLC
+    mid: 1847
+    end: 0411
+    name: Glasgow Central
+  - nre: GLC
+    mid: 1847
+    end: 0725
+    name: Glasgow Central
+  - nre: GLQ
+    mid: 1848
+    end: 0412
+    name: Glasgow Queen Street
+  - nre: GLQ
+    mid: 1848
+    end: 0726
+    name: Glasgow Queen Street
+  - nre: GRA
+    mid: 1849
+    end: 0727
+    name: Grantham
+  - nre: GEA
+    mid: 1853
+    end: 0728
+    name: Gretna Green
+  - nre: AND
+    mid: 1860
+    end: 1927
+    name: Anderston
+  - nre: ARD
+    mid: 1861
+    end: 1928
+    name: Ardgay
+  - nre: AGS
+    mid: 1862
+    end: 1929
+    name: Argyle Street
+  - nre: ASF
+    mid: 1863
+    end: 1930
+    name: Ashfield
+  - nre: BNV
+    mid: 1864
+    end: 1931
+    name: Banavie
+  - nre: BRN
+    mid: 1865
+    end: 1932
+    name: Bearsden
+  - nre: BSL
+    mid: 1866
+    end: 1933
+    name: Beasdale
+  - nre: HAL
+    mid: 1867
+    end: 0729
+    name: Hale
+  - nre: BAI
+    mid: 1869
+    end: 1935
+    name: Blairhill
+  - nre: BLT
+    mid: 1870
+    end: 1936
+    name: Blantyre
+  - nre: HDG
+    mid: 1871
+    end: 0731
+    name: Heald Green
+  - nre: BGS
+    mid: 1872
+    end: 1938
+    name: Bogston
+  - nre: UTY
+    mid: 1873
+    end: 1939
+    name: Upper Tyndrum
+  - nre: BWG
+    mid: 1874
+    end: 1940
+    name: Bowling
+  - nre: HBD
+    mid: 1875
+    end: 0732
+    name: Hebden Bridge
+  - nre: BRO
+    mid: 1876
+    end: 1942
+    name: Bridge of Orchy
+  - nre: BDG
+    mid: 1877
+    end: 1943
+    name: Bridgeton
+  - nre: HUL
+    mid: 1891
+    end: 0737
+    name: Hull
+  - nre: HUN
+    mid: 1893
+    end: 0758
+    name: Huntingdon
+  - nre: HNX
+    mid: 1894
+    end: 0769
+    name: Hunts Cross
+  - nre: INK
+    mid: 1897
+    end: 0840
+    name: Inverkeithing
+  - nre: INV
+    mid: 1898
+    end: 0851
+    name: Inverness
+  - nre: KNS
+    mid: 1901
+    end: 0912
+    name: Kennishead
+  - nre: KID
+    mid: 1904
+    end: 0933
+    name: Kidderminster
+  - nre: KMK
+    mid: 1905
+    end: 0944
+    name: Kilmarnock
+  - nre: KLM
+    mid: 1906
+    end: 0955
+    name: Kilmaurs
+  - nre: KDY
+    mid: 1907
+    end: 0996
+    name: Kirkcaldy
+  - nre: LDY
+    mid: 1909
+    end: 1087
+    name: Ladybank
+  - nre: LAN
+    mid: 1910
+    end: 1098
+    name: Lancaster
+  - nre: LMS
+    mid: 1912
+    end: 1149
+    name: Leamington Spa
+  - nre: LDS
+    mid: 1913
+    end: 1160
+    name: Leeds
+  - nre: LEI
+    mid: 1914
+    end: 1170
+    name: Leicester
+  - nre: LEU
+    mid: 1915
+    end: 1178
+    name: Leuchars
+  - nre: LSK
+    mid: 1916
+    end: 1179
+    name: Liskeard
+  - nre: LIV
+    mid: 1918
+    end: 1180
+    name: Liverpool Lime Street
+  - nre: LOC
+    mid: 1919
+    end: 1181
+    name: Lockerbie
+  - nre: EUS
+    mid: 1920
+    end: 1182
+    name: London Euston
+  - nre: KGX
+    mid: 1921
+    end: 1183
+    name: London King's Cross
+  - nre: MYB
+    mid: 1922
+    end: 1184
+    name: London Marylebone
+  - nre: MOG
+    mid: 1923
+    end: 1185
+    name: London Moorgate
+  - nre: PAD
+    mid: 1924
+    end: 1186
+    name: London Paddington
+  - nre: STP
+    mid: 1925
+    end: 0366
+    name: London St Pancras
+  - nre: STP
+    mid: 1925
+    end: 1187
+    name: London St Pancras
+  - nre: LOS
+    mid: 1926
+    end: 1188
+    name: Lostwithiel
+  - nre: MIA
+    mid: 1934
+    end: 1189
+    name: Manchester Airport
+  - nre: MAN
+    mid: 1941
+    end: 1191
+    name: Manchester Piccadilly
+  - nre: MCV
+    mid: 1945
+    end: 1192
+    name: Manchester Victoria
+  - nre: MHR
+    mid: 1948
+    end: 1194
+    name: Market Harborough
+  - nre: MNC
+    mid: 1949
+    end: 1195
+    name: Markinch
+  - nre: MAU
+    mid: 1951
+    end: 1196
+    name: Mauldeth Road
+  - nre: MAY
+    mid: 1952
+    end: 1197
+    name: Maybole
+  - nre: MHS
+    mid: 1953
+    end: 1198
+    name: Meadowhall
+  - nre: MCE
+    mid: 1955
+    end: 1199
+    name: Metrocentre
+  - nre: MBR
+    mid: 1956
+    end: 1200
+    name: Middlesbrough
+  - nre: MTS
+    mid: 1958
+    end: 1201
+    name: Montrose
+  - nre: MPT
+    mid: 1959
+    end: 1202
+    name: Morpeth
+  - nre: MTH
+    mid: 1961
+    end: 1203
+    name: Motherwell
+  - nre: NNG
+    mid: 1970
+    end: 1204
+    name: Newark Northgate
+  - nre: NCL
+    mid: 1971
+    end: 1205
+    name: Newcastle
+  - nre: NCK
+    mid: 1973
+    end: 1207
+    name: New Cumnock
+  - nre: NQY
+    mid: 1977
+    end: 1208
+    name: Newquay
+  - nre: NTA
+    mid: 1978
+    end: 1209
+    name: Newton Abbot
+  - nre: NOA
+    mid: 1981
+    end: 1212
+    name: Newton-on-Ayr
+  - nre: NIT
+    mid: 1982
+    end: 1213
+    name: Nitshill
+  - nre: NTR
+    mid: 1983
+    end: 1214
+    name: Northallerton
+  - nre: NOT
+    mid: 1984
+    end: 1215
+    name: Nottingham
+  - nre: ANL
+    mid: 1985
+    end: 2215
+    name: Anniesland
+  - nre: AUI
+    mid: 1987
+    end: 2216
+    name: Ardlui
+  - nre: ASB
+    mid: 1989
+    end: 2218
+    name: Ardrossan South Beach
+  - nre: ARG
+    mid: 1991
+    end: 2220
+    name: Arisaig
+  - nre: ART
+    mid: 1992
+    end: 2221
+    name: Arrochar & Tarbet
+  - nre: ATT
+    mid: 1993
+    end: 2222
+    name: Attadale
+  - nre: BIO
+    mid: 1994
+    end: 2223
+    name: Baillieston
+  - nre: OXN
+    mid: 1995
+    end: 1218
+    name: Oxenholme Lake District
+  - nre: BCH
+    mid: 1996
+    end: 2224
+    name: Balloch
+  - nre: BSS
+    mid: 1997
+    end: 2225
+    name: Barassie
+  - nre: BGI
+    mid: 1998
+    end: 2226
+    name: Bargeddie
+  - nre: BLG
+    mid: 1999
+    end: 2227
+    name: Bellgrove
+  - nre: BRA
+    mid: 2000
+    end: 2228
+    name: Brora
+  - nre: BUS
+    mid: 2001
+    end: 2229
+    name: Busby
+  - nre: CML
+    mid: 2002
+    end: 2230
+    name: Carmyle
+  - nre: CBC
+    mid: 2004
+    end: 2231
+    name: Coatbridge Central
+  - nre: CBS
+    mid: 2005
+    end: 2232
+    name: Coatbridge Sunnyside
+  - nre: CPA
+    mid: 2006
+    end: 2233
+    name: Corpach
+  - nre: CRR
+    mid: 2007
+    end: 2234
+    name: Corrour
+  - nre: CNR
+    mid: 2008
+    end: 2235
+    name: Crianlarich
+  - nre: COI
+    mid: 2009
+    end: 2236
+    name: Crosshill
+  - nre: DLR
+    mid: 2011
+    end: 2237
+    name: Dalreoch
+  - nre: DAL
+    mid: 2012
+    end: 2238
+    name: Dalmally
+  - nre: DAK
+    mid: 2013
+    end: 2239
+    name: Dalmarnock
+  - nre: DMR
+    mid: 2014
+    end: 2240
+    name: Dalmuir
+  - nre: DFR
+    mid: 2015
+    end: 2241
+    name: Drumfrochar
+  - nre: DRU
+    mid: 2016
+    end: 2242
+    name: Drumgelloch
+  - nre: DMY
+    mid: 2017
+    end: 2243
+    name: Drumry
+  - nre: DRN
+    mid: 2018
+    end: 2244
+    name: Duirinish
+  - nre: PDG
+    mid: 2019
+    end: 1221
+    name: Padgate
+  - nre: DUM
+    mid: 2020
+    end: 2245
+    name: Dumbreck
+  - nre: DCG
+    mid: 2021
+    end: 2246
+    name: Duncraig
+  - nre: EST
+    mid: 2022
+    end: 2247
+    name: Easterhouse
+  - nre: PGN
+    mid: 2023
+    end: 1222
+    name: Paignton
+  - nre: FRL
+    mid: 2025
+    end: 2248
+    name: Fairlie
+  - nre: FOC
+    mid: 2026
+    end: 2249
+    name: Falls of Cruachan
+  - nre: FRN
+    mid: 2028
+    end: 2251
+    name: Fearn
+  - nre: FRS
+    mid: 2029
+    end: 2252
+    name: Forsinard
+  - nre: FTM
+    mid: 2030
+    end: 2253
+    name: Fort Matilda
+  - nre: GCH
+    mid: 2031
+    end: 2254
+    name: Garelochhead
+  - nre: GAR
+    mid: 2032
+    end: 2255
+    name: Garrowhill
+  - nre: PAR
+    mid: 2033
+    end: 1223
+    name: Par
+  - nre: GRS
+    mid: 2034
+    end: 2257
+    name: Garscadden
+  - nre: GVE
+    mid: 2035
+    end: 2258
+    name: Garve
+  - nre: GLG
+    mid: 2036
+    end: 2259
+    name: Glengarnock
+  - nre: GFN
+    mid: 2037
+    end: 2260
+    name: Giffnock
+  - nre: GLF
+    mid: 2038
+    end: 2261
+    name: Glenfinnan
+  - nre: GRK
+    mid: 2039
+    end: 2262
+    name: Gourock
+  - nre: GRL
+    mid: 2040
+    end: 0400
+    name: Greenfaulds
+  - nre: GRL
+    mid: 2040
+    end: 2264
+    name: Greenfaulds
+  - nre: GKC
+    mid: 2041
+    end: 2265
+    name: Greenock Central
+  - nre: GKW
+    mid: 2042
+    end: 2266
+    name: Greenock West
+  - nre: HMY
+    mid: 2043
+    end: 2268
+    name: Hairmyres
+  - nre: HLC
+    mid: 2045
+    end: 2270
+    name: Helensburgh Central
+  - nre: HLU
+    mid: 2046
+    end: 2271
+    name: Helensburgh Upper
+  - nre: HMS
+    mid: 2047
+    end: 2272
+    name: Helmsdale
+  - nre: HLF
+    mid: 2048
+    end: 2273
+    name: Hillfoot
+  - nre: (IBM)
+    mid: 2049
+    end: 2274
+    name: IBM
+  - nre: IGD
+    mid: 2050
+    end: 2275
+    name: Invergordon
+  - nre: INP
+    mid: 2051
+    end: 2276
+    name: Inverkip
+  - nre: INH
+    mid: 2052
+    end: 2277
+    name: Invershin
+  - nre: IRV
+    mid: 2053
+    end: 2278
+    name: Irvine
+  - nre: JOR
+    mid: 2054
+    end: 2279
+    name: Jordanhill
+  - nre: KIL
+    mid: 2056
+    end: 2282
+    name: Kildonan
+  - nre: KWN
+    mid: 2057
+    end: 2283
+    name: Kilwinning
+  - nre: KBC
+    mid: 2058
+    end: 2284
+    name: Kinbrace
+  - nre: KGP
+    mid: 2059
+    end: 2285
+    name: King's Park
+  - nre: KKH
+    mid: 2060
+    end: 2286
+    name: Kirkhill
+  - nre: KWD
+    mid: 2061
+    end: 2287
+    name: Kirkwood
+  - nre: PNZ
+    mid: 2062
+    end: 1224
+    name: Penzance
+  - nre: KYL
+    mid: 2063
+    end: 2289
+    name: Kyle of Lochalsh
+  - nre: LRG
+    mid: 2064
+    end: 2290
+    name: Lairg
+  - nre: LNK
+    mid: 2065
+    end: 2291
+    name: Lanark
+  - nre: LGB
+    mid: 2066
+    end: 2292
+    name: Langbank
+  - nre: LGS
+    mid: 2067
+    end: 2293
+    name: Langside
+  - nre: PTH
+    mid: 2068
+    end: 1225
+    name: Perth
+  - nre: LAR
+    mid: 2069
+    end: 2295
+    name: Largs
+  - nre: PBO
+    mid: 2070
+    end: 1226
+    name: Peterborough
+  - nre: AAT
+    mid: 2071
+    end: 2296
+    name: Achanalt
+  - nre: LHE
+    mid: 2074
+    end: 2299
+    name: Loch Eil Outward Bound
+  - nre: LCL
+    mid: 2075
+    end: 2300
+    name: Lochailort
+  - nre: LCS
+    mid: 2076
+    end: 2301
+    name: Locheilside
+  - nre: LCC
+    mid: 2077
+    end: 2302
+    name: Lochluichart
+  - nre: PLY
+    mid: 2080
+    end: 1227
+    name: Plymouth
+  - nre: MLG
+    mid: 2081
+    end: 2305
+    name: Mallaig
+  - nre: PWW
+    mid: 2082
+    end: 1228
+    name: Pollokshaws West
+  - nre: MAX
+    mid: 2083
+    end: 2307
+    name: Maxwell Park
+  - nre: MIN
+    mid: 2084
+    end: 2308
+    name: Milliken Park
+  - nre: MLN
+    mid: 2085
+    end: 2309
+    name: Milngavie
+  - nre: MRR
+    mid: 2086
+    end: 2310
+    name: Morar
+  - nre: MPK
+    mid: 2087
+    end: 2312
+    name: Mosspark
+  - nre: MFL
+    mid: 2088
+    end: 2313
+    name: Mount Florida
+  - nre: MTV
+    mid: 2089
+    end: 2314
+    name: Mount Vernon
+  - nre: MOO
+    mid: 2090
+    end: 2315
+    name: Muir of Ord
+  - nre: MUI
+    mid: 2091
+    end: 2316
+    name: Muirend
+  - nre: NEI
+    mid: 2092
+    end: 2317
+    name: Neilston
+  - nre: OBN
+    mid: 2093
+    end: 2318
+    name: Oban
+  - nre: POO
+    mid: 2094
+    end: 1229
+    name: Poole
+  - nre: PCN
+    mid: 2095
+    end: 2319
+    name: Paisley Canal
+  - nre: PYG
+    mid: 2096
+    end: 2320
+    name: Paisley Gilmour Street
+  - nre: PYJ
+    mid: 2097
+    end: 2321
+    name: Paisley St James
+  - nre: PTK
+    mid: 2098
+    end: 2322
+    name: Partick
+  - nre: PLK
+    mid: 2099
+    end: 2323
+    name: Plockton
+  - nre: PWE
+    mid: 2100
+    end: 2324
+    name: Pollokshaws East
+  - nre: PLE
+    mid: 2101
+    end: 2325
+    name: Pollokshields East
+  - nre: PLW
+    mid: 2102
+    end: 2326
+    name: Pollokshields West
+  - nre: PTG
+    mid: 2103
+    end: 2327
+    name: Port Glasgow
+  - nre: PPK
+    mid: 2104
+    end: 2328
+    name: Possilpark & Parkhouse
+  - nre: PLN
+    mid: 2105
+    end: 1230
+    name: Portlethen
+  - nre: PRA
+    mid: 2107
+    end: 2331
+    name: Prestwick International Airport
+  - nre: QPK
+    mid: 2109
+    end: 2333
+    name: Queen's Park
+  - nre: RTN
+    mid: 2111
+    end: 2336
+    name: Renton
+  - nre: RYB
+    mid: 2113
+    end: 2338
+    name: Roy Bridge
+  - nre: PTW
+    mid: 2114
+    end: 1232
+    name: Prestwick Town
+  - nre: RUT
+    mid: 2115
+    end: 2339
+    name: Rutherglen
+  - nre: SLT
+    mid: 2116
+    end: 2340
+    name: Saltcoats
+  - nre: SCT
+    mid: 2117
+    end: 2341
+    name: Scotscalder
+  - nre: SCH
+    mid: 2118
+    end: 2342
+    name: Scotstounhill
+  - nre: PTL
+    mid: 2119
+    end: 1233
+    name: Priesthill and Darnley
+  - nre: SHL
+    mid: 2120
+    end: 2343
+    name: Shawlands
+  - nre: SLS
+    mid: 2121
+    end: 2344
+    name: Shettleston
+  - nre: SDM
+    mid: 2122
+    end: 2345
+    name: Shieldmuir
+  - nre: SIN
+    mid: 2123
+    end: 2346
+    name: Singer
+  - nre: PRE
+    mid: 2124
+    end: 1234
+    name: Preston
+  - nre: SBR
+    mid: 2125
+    end: 2347
+    name: Spean Bridge
+  - nre: SPR
+    mid: 2126
+    end: 2348
+    name: Springburn
+  - nre: QUI
+    mid: 2127
+    end: 1235
+    name: Quintrell Downs
+  - nre: SPS
+    mid: 2128
+    end: 2350
+    name: Stepps
+  - nre: STV
+    mid: 2129
+    end: 2351
+    name: Stevenston
+  - nre: SUM
+    mid: 2130
+    end: 2353
+    name: Summerston
+  - nre: THB
+    mid: 2131
+    end: 2354
+    name: Thornliebank
+  - nre: TYL
+    mid: 2132
+    end: 2356
+    name: Tyndrum Lower
+  - nre: RDG
+    mid: 2133
+    end: 1236
+    name: Reading
+  - nre: WMS
+    mid: 2134
+    end: 2357
+    name: Wemyss Bay
+  - nre: WKB
+    mid: 2135
+    end: 2358
+    name: West Kilbride
+  - nre: WNL
+    mid: 2136
+    end: 2359
+    name: Whinhill
+  - nre: WCR
+    mid: 2137
+    end: 2360
+    name: Whitecraigs
+  - nre: YOK
+    mid: 2138
+    end: 2361
+    name: Yoker
+  - nre: AXP
+    mid: 2139
+    end: 2363
+    name: Alexandra Parade
+  - nre: BNL
+    mid: 2140
+    end: 2364
+    name: Barnhill
+  - nre: BPT
+    mid: 2141
+    end: 2366
+    name: Bishopton
+  - nre: RED
+    mid: 2142
+    end: 1237
+    name: Redruth
+  - nre: BCN
+    mid: 2143
+    end: 2367
+    name: Branchton
+  - nre: BUI
+    mid: 2145
+    end: 2369
+    name: Burnside
+  - nre: RET
+    mid: 2146
+    end: 1238
+    name: Retford
+  - nre: CDO
+    mid: 2147
+    end: 2370
+    name: Cardonald
+  - nre: CDR
+    mid: 2148
+    end: 2371
+    name: Cardross
+  - nre: CLU
+    mid: 2149
+    end: 2372
+    name: Carluke
+  - nre: CAY
+    mid: 2150
+    end: 2373
+    name: Carntyne
+  - nre: CDY
+    mid: 2151
+    end: 2374
+    name: Cartsdyke
+  - nre: CCT
+    mid: 2153
+    end: 2376
+    name: Cathcart
+  - nre: CHX
+    mid: 2155
+    end: 2378
+    name: Charing Cross
+  - nre: CKS
+    mid: 2156
+    end: 2380
+    name: Clarkston
+  - nre: CYK
+    mid: 2157
+    end: 2381
+    name: Clydebank
+  - nre: COA
+    mid: 2158
+    end: 2382
+    name: Coatdyke
+  - nre: CON
+    mid: 2159
+    end: 2383
+    name: Connel Ferry
+  - nre: CKH
+    mid: 2160
+    end: 2384
+    name: Corkerhill
+  - nre: CGD
+    mid: 2161
+    end: 2385
+    name: Craigendoran
+  - nre: CFF
+    mid: 2162
+    end: 2386
+    name: Croftfoot
+  - nre: CKT
+    mid: 2163
+    end: 2387
+    name: Crookston
+  - nre: CUA
+    mid: 2164
+    end: 2389
+    name: Culrain
+  - nre: CUB
+    mid: 2165
+    end: 2390
+    name: Cumbernauld
+  - nre: DLY
+    mid: 2167
+    end: 2392
+    name: Dalry
+  - nre: ROC
+    mid: 2168
+    end: 1239
+    name: Roche
+  - nre: DIN
+    mid: 2169
+    end: 2394
+    name: Dingwall
+  - nre: DMC
+    mid: 2170
+    end: 2395
+    name: Drumchapel
+  - nre: DST
+    mid: 2171
+    end: 2396
+    name: Duke Street
+  - nre: DBC
+    mid: 2172
+    end: 2397
+    name: Dumbarton Central
+  - nre: DNO
+    mid: 2173
+    end: 2398
+    name: Dunrobin Castle
+  - nre: EKL
+    mid: 2174
+    end: 2399
+    name: East Kilbride
+  - nre: FTW
+    mid: 2175
+    end: 2400
+    name: Fort William
+  - nre: GOL
+    mid: 2177
+    end: 2402
+    name: Golspie
+  - nre: HNC
+    mid: 2178
+    end: 2403
+    name: Hamilton Central
+  - nre: HLE
+    mid: 2180
+    end: 2405
+    name: Hillington East
+  - nre: HLW
+    mid: 2181
+    end: 2406
+    name: Hillington West
+  - nre: HYN
+    mid: 2182
+    end: 2408
+    name: Hyndland
+  - nre: SLD
+    mid: 2183
+    end: 1240
+    name: Salford Crescent
+  - nre: MYH
+    mid: 2184
+    end: 2409
+    name: Maryhill
+  - nre: PTT
+    mid: 2186
+    end: 2411
+    name: Patterton
+  - nre: ROG
+    mid: 2187
+    end: 2413
+    name: Rogart
+  - nre: SRA
+    mid: 2188
+    end: 2414
+    name: Stratford
+  - nre: STC
+    mid: 2189
+    end: 2415
+    name: Strathcarron
+  - nre: TAI
+    mid: 2190
+    end: 2416
+    name: Tain
+  - nre: TAY
+    mid: 2191
+    end: 2417
+    name: Taynuilt
+  - nre: THT
+    mid: 2192
+    end: 2418
+    name: Thorntonhall
+  - nre: THS
+    mid: 2193
+    end: 2419
+    name: Thurso
+  - nre: TUL
+    mid: 2194
+    end: 2420
+    name: Tulloch
+  - nre: SQH
+    mid: 2195
+    end: 1241
+    name: Sanquhar
+  - nre: WES
+    mid: 2197
+    end: 2424
+    name: Westerton
+  - nre: SCA
+    mid: 2198
+    end: 1242
+    name: Scarborough
+  - nre: WFF
+    mid: 2199
+    end: 2426
+    name: Whifflet
+  - nre: WLM
+    mid: 2200
+    end: 2427
+    name: Williamwood
+  - nre: WSH
+    mid: 2201
+    end: 2428
+    name: Wishaw
+  - nre: WDL
+    mid: 2202
+    end: 2430
+    name: Woodhall
+  - nre: WCK
+    mid: 2203
+    end: 2431
+    name: Wick
+  - nre: DAG
+    mid: 2205
+    end: 2434
+    name: Dalgety Bay
+  - nre: DBE
+    mid: 2207
+    end: 2436
+    name: Dumbarton East
+  - nre: KPT
+    mid: 2208
+    end: 2437
+    name: Kilpatrick
+  - nre: MUB
+    mid: 2210
+    end: 2439
+    name: Musselburgh
+  - nre: SHF
+    mid: 2211
+    end: 1243
+    name: Sheffield
+  - nre: SPF
+    mid: 2214
+    end: 1245
+    name: Springfield
+  - nre: SAU
+    mid: 2256
+    end: 1246
+    name: St Austell
+  - nre: SCR
+    mid: 2263
+    end: 1247
+    name: St Columb Road
+  - nre: SER
+    mid: 2267
+    end: 1248
+    name: St Erth
+  - nre: STT
+    mid: 2281
+    end: 1249
+    name: Stewarton
+  - nre: SVG
+    mid: 2288
+    end: 1250
+    name: Stevenage
+  - nre: STR
+    mid: 2294
+    end: 1251
+    name: Stranraer
+  - nre: SOT
+    mid: 2306
+    end: 1252
+    name: Stoke-on-Trent
+  - nre: SPT
+    mid: 2311
+    end: 1253
+    name: Stockport
+  - nre: STN
+    mid: 2330
+    end: 1254
+    name: Stonehaven
+  - nre: SUN
+    mid: 2335
+    end: 1255
+    name: Sunderland
+  - nre: TAM
+    mid: 2349
+    end: 1256
+    name: Tamworth
+  - nre: TAU
+    mid: 2352
+    end: 1257
+    name: Taunton
+  - nre: TVP
+    mid: 2365
+    end: 1259
+    name: Tiverton Parkway
+  - nre: TOT
+    mid: 2379
+    end: 1260
+    name: Totnes
+  - nre: TRN
+    mid: 2388
+    end: 1261
+    name: Troon
+  - nre: TRU
+    mid: 2393
+    end: 1262
+    name: Truro
+  - nre: WKF
+    mid: 2407
+    end: 1263
+    name: Wakefield Westgate
+  - nre: WSM
+    mid: 2412
+    end: 1264
+    name: Weston-super-Mare
+  - nre: WID
+    mid: 2421
+    end: 1265
+    name: Widnes
+  - nre: WGW
+    mid: 2423
+    end: 1266
+    name: Wigan Wallgate
+  - nre: WIN
+    mid: 2425
+    end: 1267
+    name: Winchester
+  - nre: WDM
+    mid: 2429
+    end: 1268
+    name: Windermere
+  - nre: WVH
+    mid: 2432
+    end: 1269
+    name: Wolverhampton
+  - nre: YRK
+    mid: 2440
+    end: 1270
+    name: York
+
+carriages:
+  - file: "1273"
+    weight: 1
+    number: 1
+  - file: "1275"
+    weight: 6
+    number: 2
+  - file: "1276"
+    weight: 4
+    number: 3
+  - file: "1277"
+    weight: 6
+    number: 4
+  - file: "1278"
+    weight: 3
+    number: 5
+  - file: "1279"
+    weight: 6
+    number: 6
+  - file: "1280"
+    weight: 4
+    number: 7
+  - file: "1281"
+    weight: 4
+    number: 8
+  - file: "1282"
+    weight: 2
+    number: 9
+  - file: "1284"
+    weight: 2
+    number: 10
+  - file: "1285"
+    weight: 4
+    number: 11
+  - file: "1286"
+    weight: 1
+    number: 12
+  - file: "1287"
+    weight: 1
+    number: 13
+  - file: "1289"
+    weight: 1
+    number: 14
+  - file: "1290"
+    weight: 1
+    number: 15
+  - file: "1291"
+    weight: 1
+    number: 16
+  - file: "1292"
+    weight: 1
+    number: 17
+  - file: "1294"
+    weight: 1
+    number: 18
+  - file: "1297"
+    weight: 1
+    number: 19
+  - file: "1299"
+    weight: 1
+    number: 20
+
+carriageSubsets:
+  - file: "0495"
+    min: 2
+  - file: "0496"
+    min: 3
+  - file: "0497"
+    min: 4
+  - file: "0498"
+    min: 5
+  - file: "0499"
+    min: 6
+  - file: "0500"
+    min: 7
+  - file: "0501"
+    min: 8
+  - file: "0502"
+    min: 9
+  - file: "0503"
+    min: 10
+  - file: "0504"
+    min: 11
+  - file: "0505"
+    min: 12
+  - file: "0506"
+    min: 13
+  - file: "0509"
+    min: 3
+  - file: "0511"
+    min: 4
+  - file: "0512"
+    min: 5
+  - file: "0513"
+    min: 6
+  - file: "0514"
+    min: 7
+  - file: "0515"
+    min: 8
+  - file: "0516"
+    min: 19
+  - file: "0517"
+    min: 10
+  - file: "0518"
+    min: 11
+  - file: "0519"
+    min: 12
+  - file: "0520"
+    min: 13
+  - file: "0521"
+    min: 14
+  - file: "0523"
+    min: 2
+  - file: "0524"
+    min: 3
+  - file: "0525"
+    min: 4
+  - file: "0526"
+    min: 5
+  - file: "0527"
+    min: 6
+  - file: "0528"
+    min: 7
+  - file: "0529"
+    min: 8
+  - file: "0530"
+    min: 9
+  - file: "0531"
+    min: 10
+  - file: "0532"
+    min: 11
+  - file: "0533"
+    min: 12
+  - file: "0534"
+    min: 13

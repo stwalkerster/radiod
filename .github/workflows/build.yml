@@ -58,6 +58,17 @@ jobs:
           type=ref,event=pr,prefix=metadata-pr-
           type=sha,prefix=metadata-
 
+    - name: Metadata for announcer
+      id: meta-announcer
+      uses: docker/metadata-action@v5
+      with:
+        images: |
+          ghcr.io/stwalkerster/radiod
+        tags: |
+          type=raw,value=announcer,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
+          type=ref,event=pr,prefix=announcer-pr-
+          type=sha,prefix=announcer-
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
@@ -68,6 +79,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
+    - name: Publish rail announcer
+      run: dotnet publish LizardNetRadio.RailAnnouncer/LizardNetRadio.RailAnnouncer.csproj
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
@@ -92,6 +106,11 @@ jobs:
         mv net8.0 radiod-metadata
         tar czf radiod-metadata.tar.gz radiod-metadata/
         aws s3 cp radiod-metadata.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
+
+        cd ../../../LizardNetRadio.RailAnnouncer/bin/Release/net8.0
+        mv publish radiod-announcer
+        tar czf radiod-announcer.tar.gz radiod-announcer/
+        aws s3 cp radiod-announcer.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
 
     - name: GHCR login
       uses: docker/login-action@v3

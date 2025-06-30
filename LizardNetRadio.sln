@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LizardNetRadio.Common", "Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LizardNetRadio.MetadataMonitor", "LizardNetRadio.MetadataMonitor\LizardNetRadio.MetadataMonitor.csproj", "{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LizardNetRadio.RailAnnouncer", "LizardNetRadio.RailAnnouncer\LizardNetRadio.RailAnnouncer.csproj", "{BD141C54-5E15-425B-B10A-D50A973E1DEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61C4AD6B-39BE-48A3-8E76-D93CEEF9DD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD141C54-5E15-425B-B10A-D50A973E1DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD141C54-5E15-425B-B10A-D50A973E1DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD141C54-5E15-425B-B10A-D50A973E1DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD141C54-5E15-425B-B10A-D50A973E1DEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
