@@ -107,7 +107,7 @@ jobs:
         tar czf radiod-metadata.tar.gz radiod-metadata/
         aws s3 cp radiod-metadata.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
 
-        cd ../../../LizardNetRadio.RailAnnouncer/bin/Release/net8.0
+        cd ../../../LizardNetRadio.RailAnnouncer/bin/Release/net8.0/linux-x64
         mv publish radiod-announcer
         tar czf radiod-announcer.tar.gz radiod-announcer/
         aws s3 cp radiod-announcer.tar.gz s3://stwalkerster-098014529583-github-artefacts/stwalkerster/radiod/${{ steps.vars.outputs.timestamp }}-${{ steps.vars.outputs.sha_short }}/
