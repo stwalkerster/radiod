@@ -87,7 +87,7 @@ class Program
         files.Add(destination.End);
         
         var nextDouble = rnd.NextDouble();
-        if (nextDouble > 0.7)
+        if (nextDouble <= 0.65)
         {
             files.Add(data.ItemSets["isDelayed"].GetRandom(rnd));
         }
@@ -180,7 +180,7 @@ class Program
             files.Add("2362");
         }
         
-        var formation = false;
+        var formation = rnd.NextDouble() > 0.5;
         var shortPlatforms = false;
         Carriage? carriages = null;
         if (formation)
@@ -239,7 +239,7 @@ class Program
         }
         
         // trolley
-        if (rnd.NextDouble() > 0.7)
+        if (rnd.NextDouble() > 0.8)
         {
             // A trolley service
             files.Add("0002");
