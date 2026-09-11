@@ -19,3 +19,25 @@ sequenceDiagram
     Minecraft->>Player: Song played via PlasmoVoice
 ```
 
+### Logical components for podding up
+
+* IRC Bot
+
+* Liquidsoap
+    * announcement generator tool (shared filesystem)
+    * sidecar (shared network)
+
+* Icecast2
+  * metadata (shared disk)
+  * silence (shared network)
+
+### Config
+
+Most stuff is configured via Yaml files. Some stuff is optionally configured via environment variables.
+
+Available environment variables:
+- IRC_SERVER_PASSWORD
+- IRC_OPER_USER
+- IRC_OPER_PASSWORD
+- RABBITMQ_USERNAME
+- RABBITMQ_PASSWORD
