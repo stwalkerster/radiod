@@ -33,7 +33,6 @@ rabbitMqConfiguration:
   tls: false
 
 awsConfiguration:
-  profile: default
   bucketName: radiod-bucket
   voices:
     # en-US
