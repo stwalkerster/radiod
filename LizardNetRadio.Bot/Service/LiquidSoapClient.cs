@@ -21,6 +21,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
     public LiquidSoapClient(GlobalConfiguration config, ILogger logger, IConnection connection)
     {
         this.logger = logger;
+        
+        this.logger.Debug("Creating RabbitMQ channel for LiquidSoapClient");
         this.channel = connection.CreateModel();
 
         this.replyQueueName = config.RabbitMqConfiguration.ObjectPrefix + config.MyQueue;
@@ -36,6 +38,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
         this.channel.BasicConsume(this.replyQueueName, true, this.consumer);
 
         this.streamName = config.StreamName;
+        
+        this.logger.Debug("LiquidSoapClient initialized with queues: " + this.replyQueueName + " / " + this.requestQueueName + " and channel: " + this.channel);
     }
 
     private (string, SemaphoreSlim) RemoteProcedureCall(string command)
@@ -54,7 +58,7 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
             this.taskList.Add(guid, (semaphore, "", ""));
         }
         
-        this.logger.DebugFormat("Sending request with ID {0}", guid);
+        this.logger.DebugFormat("Sending RPC request with ID {0}", guid);
         
         this.channel.BasicPublish(
             exchange: this.requestQueueName,
@@ -129,6 +133,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
     public async Task<IEnumerable<string>> Inject(string command)
     {
+        this.logger.DebugFormat("Injecting command: {0}", command);
+        
         var (guid, semaphore) = this.RemoteProcedureCall(command);
         
         await semaphore.WaitAsync();
@@ -150,6 +156,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
     
     public async Task<int> Request(string command, string queue)
     {
+        this.logger.DebugFormat("Requesting command: {0} on queue: {1}", command, queue);
+        
         var (guid, semaphore) = this.RemoteProcedureCall(queue + ".push " + command);
         
         await semaphore.WaitAsync();
@@ -171,6 +179,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
 
     public async Task<double?> Remaining()
     {
+        this.logger.DebugFormat("Requesting remaining time for stream: {0}", this.streamName);
+        
         var (guid, semaphore) = this.RemoteProcedureCall($"{this.streamName}.remaining");
         
         await semaphore.WaitAsync();
@@ -193,6 +203,8 @@ public class LiquidSoapClient : IStartable, ILiquidSoapClient
     
     public async Task<(string artist, string title)> NowPlaying()
     {
+        this.logger.DebugFormat("Requesting now playing metadata for stream: {0}", this.streamName);
+        
         var (guid, semaphore) = this.RemoteProcedureCall($"{this.streamName}.metadata");
         
         await semaphore.WaitAsync();

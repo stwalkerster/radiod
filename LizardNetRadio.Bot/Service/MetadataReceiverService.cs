@@ -24,13 +24,18 @@ public class MetadataReceiverService : IMetadataReceiverService
     {
         this.ircClient = ircClient;
         this.logger = logger;
+        
+        this.logger.Debug("Creating RabbitMQ channel for LiquidSoapClient");
         this.channel = rabbitConnection.CreateModel();
+        
         this.metadataQueue = config.RabbitMqConfiguration.ObjectPrefix + config.MetadataQueue;
         this.metadataChannel = config.MetadataChannel;
         this.streamName = "/" + config.StreamName;
         
         this.consumer = new EventingBasicConsumer(this.channel);
         this.consumer.Received += this.ConsumerOnReceived;
+        
+        logger.Debug("MetadataReceiverService initialized with queue: " + this.metadataQueue + " and channel: " + this.metadataChannel);
     }
 
     private void ConsumerOnReceived(object sender, BasicDeliverEventArgs e)
@@ -53,17 +58,19 @@ public class MetadataReceiverService : IMetadataReceiverService
         }
         catch (Exception ex)
         {
-            this.logger.Error("Something went wrong", ex);
+            this.logger.Error("Metadata onreceived - something went wrong", ex);
         }
     }
 
     public void Start()
     {
+        this.logger.Debug("MetadataReceiverService starting");
         this.channel.BasicConsume(this.metadataQueue, false, this.consumer);
     }
 
     public void Stop()
     {
+        this.logger.Debug("MetadataReceiverService stopping");
         throw new NotImplementedException();
     }
 }
