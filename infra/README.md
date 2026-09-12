@@ -1,5 +1,3 @@
 # README before deploying
 
-You'll need to blat out your .terraform directory, and fix the role ARNs in main.tf before initing and applying.
-
-This is OpenTofu, not Terraform.
+You'll need to fix the state role ARN in main.tf before initing and applying.

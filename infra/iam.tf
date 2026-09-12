@@ -41,7 +41,10 @@ resource "aws_iam_role" "radiod" {
         }
         Condition = {
           StringEquals = {
-            "aws:PrincipalTag/x509Subject/CN" : "radiod-bot"
+            "aws:PrincipalTag/x509Subject/CN" : "bot.radio.k8s.stwalkerster.net"
+          }
+          ArnEquals = {
+            "aws:SourceArn": var.role_trust_anchor
           }
         }
       }
